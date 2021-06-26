@@ -1,3 +1,4 @@
 theme: jekyll-theme-hacker
 title: 0x01g33k security blog
 description: This is my personal cybersercurity blog, where I post notes, tips, and tricks that I find interesting. 
+show_downloads: true
