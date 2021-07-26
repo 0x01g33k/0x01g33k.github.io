@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+published: true
 ---
 
-Something about me.
+penetration tester, gamer, nerd, into everything cybersecurity. 
