@@ -100,8 +100,10 @@ The flag is : ASCWG{B@sH_scR!ptssSS}
 
 The description hints that we may be facing a memory dump, running file command we get nothing useful. So we run volatility command with imageinfo plugin we get some interesting stuff.
 ![]({{site.baseurl}}/_posts/2020-09-13-18_39_52-kali-linux-vmware-workstation.png)![2020-09-13-18_39_52-kali-linux-vmware-workstation.png]({{site.baseurl}}/_posts/2020-09-13-18_39_52-kali-linux-vmware-workstation.png)
+
 So it's a windows 7 memory dump, we need to dig deeper. using pslist plugin we are able to dump the processes that were running 
 ![]({{site.baseurl}}/_posts/2020-09-13-18_42_40-kali-linux-vmware-workstation.png)![2020-09-13-18_42_40-kali-linux-vmware-workstation.png]({{site.baseurl}}/_posts/2020-09-13-18_42_40-kali-linux-vmware-workstation.png)
+
 We have two cmd.exe processes dumping their contents using consoles plugin, we get a mega drive link.
 ![]({{site.baseurl}}/_posts/2020-09-13-18_44_37-kali-linux-vmware-workstation.png)![2020-09-13-18_44_37-kali-linux-vmware-workstation.png]({{site.baseurl}}/_posts/2020-09-13-18_44_37-kali-linux-vmware-workstation.png)
 going to that [link](https://mega.nz/file/ImQR1Coa#Dt3tr6Ze8Ibwconty_SEGq48N_xmkHiZAbyob8-TlSA) we get the flag.rar.rar file, cracking it using johntheripper. We get the password which is "princesa", we are able to get the flag. 
