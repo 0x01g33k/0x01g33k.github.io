@@ -11,9 +11,9 @@ Hello as it was an honor to write these challenges for the final round of Arab S
 
 The challenge description says the hacker has hidden the sensitive files inside a picture. okay let's check this picture first.
 ![]({{site.baseurl}}/assets/2020-09-13-18_06_15-kali-linux-vmware-workstation.png)
-![2020-09-13-18_06_15-kali-linux-vmware-workstation.png]
+
 From the looks of it, it doesn't have anything interesting so we need to go deeper, using exiftool we got something interesting.
-![]({{site.baseurl}}/assets/2020-09-13-18_09_10-kali-linux-vmware-workstation.png)![2020-09-13-18_09_10-kali-linux-vmware-workstation.png]
+![]({{site.baseurl}}/assets/2020-09-13-18_09_10-kali-linux-vmware-workstation.png)
 
 It looks like an md5 has, trying to crack it online using <a href="http://crackstation.net">crackstation.net</a> we get the password "alvium". Using steghide we were able to extract the Flag.txt file
 
@@ -24,16 +24,16 @@ It looks like an md5 has, trying to crack it online using <a href="http://cracks
 
 <p>Challenge no.2: Disassembled</p>
 ![]({{site.baseurl}}/assets/disassambled.png)
-![disassambled.png]({{site.baseurl}}/assets/disassambled.png)
+
 
 So from the description we have an obfuscated file and we need to de-obufsucate it.
 
 Looking at the downloaded rar file we get these weird pictures
-![]({{site.baseurl}}/assets/2020-09-13-18_15_01-kali-linux-vmware-workstation.png)![2020-09-13-18_15_01-kali-linux-vmware-workstation.png]
+![]({{site.baseurl}}/assets/2020-09-13-18_15_01-kali-linux-vmware-workstation.png)
 
 The directory has 1162 pictures and their names appear to be base64 encoded. We need to write a script to decode their names and then reassemble the pictures in the correct order. 
 
-```
+```bash
 mkdir renamed_files
 
 #Decode all of the image file names (base64)
@@ -98,25 +98,25 @@ The flag is : ASCWG{B@sH_scR!ptssSS}
 ![]({{site.baseurl}}/assets/easy-peasy.png)![easy-peasy.png]
 
 The description hints that we may be facing a memory dump, running file command we get nothing useful. So we run volatility command with imageinfo plugin we get some interesting stuff.
-![]({{site.baseurl}}/assets/2020-09-13-18_39_52-kali-linux-vmware-workstation.png)![2020-09-13-18_39_52-kali-linux-vmware-workstation.png]
+![]({{site.baseurl}}/assets/2020-09-13-18_39_52-kali-linux-vmware-workstation.png)
 
 So it's a windows 7 memory dump, we need to dig deeper. using pslist plugin we are able to dump the processes that were running 
-![]({{site.baseurl}}/assets/2020-09-13-18_42_40-kali-linux-vmware-workstation.png)![2020-09-13-18_42_40-kali-linux-vmware-workstation.png]
+![]({{site.baseurl}}/assets/2020-09-13-18_42_40-kali-linux-vmware-workstation.png)
 
 We have two cmd.exe processes dumping their contents using consoles plugin, we get a mega drive link.
-![]({{site.baseurl}}/assets/2020-09-13-18_44_37-kali-linux-vmware-workstation.png)![2020-09-13-18_44_37-kali-linux-vmware-workstation.png]
+![]({{site.baseurl}}/assets/2020-09-13-18_44_37-kali-linux-vmware-workstation.png)
 going to that [link](https://mega.nz/file/ImQR1Coa#Dt3tr6Ze8Ibwconty_SEGq48N_xmkHiZAbyob8-TlSA) we get the flag.rar.rar file, cracking it using johntheripper. We get the password which is "princesa", we are able to get the flag. 
 <p>ASCWG{M3moRy_f0Rens!Cs_ar3_FuN}</p>
 
 <p>Challenge no.4: LookyLUKS</p>
 ![]({{site.baseurl}}/assets/lookyluks.png)
-![lookyluks.png]
+
 
 From the description we are facing an encrypted filesystem, and the name of the challenge hints that it's a LUKS filesystem. 
 
 we need to use a tool to brute force the password, using a tool called <a href="https://github.com/glv2/bruteforce-luks">bruteforce-luks</a> . We are able to get the password for the challenge which is "xavier". mounting that drive using cryptsetup utility 
 
-![]({{site.baseurl}}/assets/2020-09-13-18_53_05-kali-linux-vmware-workstation.png)![2020-09-13-18_53_05-kali-linux-vmware-workstation.png]
+![]({{site.baseurl}}/assets/2020-09-13-18_53_05-kali-linux-vmware-workstation.png)
 
 where NULL is the name of the volume I want to mount. We are able to get the flag 
 
@@ -131,7 +131,7 @@ the password my friend <a href="https://satharus.me/cybersecurity/2020/09/13/asc
 The password is "the f1@g !s encrypt3d w!tH a l0g!c g@t3", now to work on Hydra 2.
 
 The file appears to have some hex values judging from the first numbers that it's a rar file converted to hex. ![2020-09-13-19_02_36-kali-linux-vmware-workstation.png]({{site.baseurl}}/assets/2020-09-13-19_02_36-kali-linux-vmware-workstation.png)
-we need to reverse these hex values to the original file, using xxd utility ![]({{site.baseurl}}/assets/2020-09-13-19_04_48-kali-linux-vmware-workstation.png)![2020-09-13-19_04_48-kali-linux-vmware-workstation.png]
+we need to reverse these hex values to the original file, using xxd utility ![]({{site.baseurl}}/assets/2020-09-13-19_04_48-kali-linux-vmware-workstation.png)
 
 The Flag appears to be encrypted going back to the password its explicitly states that the flag is encrypted with a logic gate so it must be XORd, going to <a href="https://gchq.github.io/CyberChef/">cyberchef </a>to decrypt it, we get the flag.
 <p>ASCWG{Wh0_kn3w_DF_and_R3_can_w0rk_t0g3tHeR}.</p>
