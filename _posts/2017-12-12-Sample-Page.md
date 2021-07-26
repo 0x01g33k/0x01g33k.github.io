@@ -29,7 +29,7 @@ It looks like an md5 has, trying to crack it online using <a href="http://cracks
 So from the description we have an obfuscated file and we need to de-obufsucate it.
 
 Looking at the downloaded rar file we get these weird pictures
-![]({{site.baseurl}}/assets/2020-09-13-18_15_01-kali-linux-vmware-workstation.png)![2020-09-13-18_15_01-kali-linux-vmware-workstation.png]({{site.baseurl}}/assets/2020-09-13-18_15_01-kali-linux-vmware-workstation.png)
+![]({{site.baseurl}}/assets/2020-09-13-18_15_01-kali-linux-vmware-workstation.png)![2020-09-13-18_15_01-kali-linux-vmware-workstation.png]
 
 The directory has 1162 pictures and their names appear to be base64 encoded. We need to write a script to decode their names and then reassemble the pictures in the correct order. 
 
@@ -90,7 +90,7 @@ echo "Successfuly recreated the image at ./output.png"
 
 Big thanks to my dear friend [Satharus](https://satharus.me/) for helping me write this script.
 running the script inside the directory we get the final picture called output.png 
-![]({{site.baseurl}}/assets/2020-09-13-18_33_43-kali-linux-vmware-workstation.png)![2020-09-13-18_33_43-kali-linux-vmware-workstation.png]({{site.baseurl}}/assets/2020-09-13-18_33_43-kali-linux-vmware-workstation.png)
+![]({{site.baseurl}}/assets/2020-09-13-18_33_43-kali-linux-vmware-workstation.png)![2020-09-13-18_33_43-kali-linux-vmware-workstation.png]
 
 The flag is : ASCWG{B@sH_scR!ptssSS}
 
