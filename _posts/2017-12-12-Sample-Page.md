@@ -34,7 +34,8 @@ Looking at the downloaded rar file we get these weird pictures
 
 The directory has 1162 pictures and their names appear to be base64 encoded. We need to write a script to decode their names and then reassemble the pictures in the correct order. 
 
-```mkdir renamed_files
+```
+mkdir renamed_files
 
 #Decode all of the image file names (base64)
 for filename in `ls *.png`
