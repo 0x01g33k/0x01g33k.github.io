@@ -3,7 +3,7 @@ title: ASCWG Forensics Challenges Final Round writeup
 published: true
 ---
 
-Hello as it was an honor to write these challenges for the final round of Arab Security Cyber War Games, these are the writeups for said challenges.</p>
+Hello as it was an honor to write these challenges for the final round of Arab Security Cyber War Games, these are the writeups for said challenges.
 
 
 <p>Challenge 1:  Bamboozled</p>
