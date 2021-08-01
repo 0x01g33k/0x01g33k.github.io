@@ -2,7 +2,7 @@
 published: true
 ---
 For the second year in a row I had the honor to write the DF challenges for ASCWG 2021
- I've created 5 challenges for this year, some of them were solved in an unintended way, and some solved the way I designed them to be.
+ I've created 5 challenges for this year, some of them were solved in an unintended way, and some were solved the way I designed them to be.
  
  <p>1st Challenge: Warmup-01</p>
  ![]({{site.baseurl}}/assets/2021-07-30%2018_39_54-Window.png)
