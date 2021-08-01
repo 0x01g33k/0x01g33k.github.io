@@ -41,7 +41,7 @@ Flag: ```ASCWG{H3xDump_1s_EZ}```
 
 <p>3rd Challenge: noobie sysadmin</p>
 
-![]({{site.baseurl}}/assets/2021-07-30%2018_39_18-Window.png)
+![]({{site.baseurl}}/assets/2021-07-30%2018_38_33-Window.png)
 
 Description: ```A sloppy sysadmin accidently deleted some files from our lulzcorp servers, can you recover the deleted file?```
 
