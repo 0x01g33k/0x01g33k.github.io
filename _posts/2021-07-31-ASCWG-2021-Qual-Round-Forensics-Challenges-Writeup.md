@@ -132,8 +132,8 @@ Just open the file with in cyberchef and use XOR bruteforce recipe, and you will
 
 <p>5th Challenge: Registry Nightmare</p>
 
-![]({{site.baseurl}}/assets/2021-07-30%2018_38_33-Window.png)
-
+![]({{site.baseurl}}/assets/2021-07-30%2018_39_18-Window.png)
+ 
 Description: ```A hacker was able to gain access to the CEO's machine, he gained access to the machine by using an outdated vulnerable version of XYZ program, the program was used a lot by the CEO. The hacker was able to gain access to the computer physically and was about to get the files he needed but he was caught, can you recover the flag from the reg file?
 NOTE: You'll need a key and IV to decrypt the flag, both of which are in front of you when you find what you're looking for.```
 
