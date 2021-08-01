@@ -28,6 +28,7 @@ Flag: ```ASCWG{1337_DF1R_1nv3stg@t0R}```
 ![2021-07-30 18_39_35-Window.png]({{site.baseurl}}/assets/2021-07-30 18_39_35-Window.png)
 
 Description:```Taking things a bit higher, lets try to get the flag from that hex.```
+
 Reading the content of the file called warmup-02 we get a hexdump for a rar file. 
 
 ![2021-07-31 13_31_46-Window.png]({{site.baseurl}}/assets/2021-07-31 13_31_46-Window.png)
@@ -167,5 +168,9 @@ And same as before, we decode the base64 string, and then we decrypt the encrypt
 ![]({{site.baseurl}}/assets/2021-08-01%2002_00_18-Window.png)
 
 Flag: ```ASCWG{R3g1stry_F0r3ns1c$_1s_Sup3r_C0O1}```
+
+I'd like to give a big shout out to my dear friend [Mohammed Hassan](https://0xmohammed.github.io) for giving me a new method to solve the challenge without the need to use ```notepad++```
+
+Mohammed's method: ```strings -e l challenge.reg |grep 'MountedDevice' -A5```
 
 And this concludes the DF challenges for ASCWG 2021 Qual Round, I hope the participants have enjoyed solving these challenges and learned something new, and I will see you all in the finals.
