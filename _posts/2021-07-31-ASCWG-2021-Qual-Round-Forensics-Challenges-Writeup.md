@@ -9,7 +9,7 @@ For the second year in a row I had the honor to write the DF challenges for ASCW
  Description: "let's take things slowly, what's the first thing to do when you get a pic file that has a hidden string in it, in order to extract that string?"
  
  The challenge is extremely easy, looking at the file we get nothing useful
-![]({{site.baseurl}}/assets/WhatsApp%20Image%202021-07-30%20at%202.28.34%20AM.jpeg)![WhatsApp Image 2021-07-30 at 2.28.34 AM.jpeg]({{site.baseurl}}/assets/WhatsApp Image 2021-07-30 at 2.28.34 AM.jpeg)
+![]({{site.baseurl}}/assets/WhatsApp%20Image%202021-07-30%20at%202.28.34%20AM.jpeg)
 
 
 I added some memes to the challenges :"D
