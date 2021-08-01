@@ -29,7 +29,8 @@ Description:```Taking things a bit higher, lets try to get the flag from that he
 Reading the content of the file called warmup-02 we get a hexdump for a rar file. 
 ![2021-07-31 13_31_46-Window.png]({{site.baseurl}}/assets/2021-07-31 13_31_46-Window.png)
 
-Converting the hexdump to a rar file and bruteforcing, the rar password "which is cassandra", we get the flag. 
+Converting the hexdump to a rar file and bruteforcing, the rar password, which is ```cassandra```, we get the flag. 
+
 ![2021-07-31 13_33_14-Window.png]({{site.baseurl}}/assets/2021-07-31 13_33_14-Window.png)
 
 Flag: ```ASCWG{H3xDump_1s_EZ}```
@@ -59,7 +60,7 @@ Base64 string: ```UmFyIRoHAQAzkrXlCgEFBgAFAQGAgAB6Vf0IVQIDPLAABJwAICK6s9qAAwAIRm
 Decoding that string using cyberchef, we get some data that shows it's a rar file.
 ![]({{site.baseurl}}/assets/2021-08-01%2001_21_02-Window.png)
 
-Downloading that file and bruteforcing its password "which is sage123", and we are able to extract the flag.
+Downloading that file and bruteforcing its password, which is ```sage123```, and we are able to extract the flag.
 
 ![]({{site.baseurl}}/assets/2021-08-01 01_23_23-Window.png)
 
@@ -105,7 +106,9 @@ decoded = string.split("###")[0]
 print("Sucessfully decoded: "+decoded)
 song.close()
 ```
+
 Using that script we are able to extract the key. 
+
 ![]({{site.baseurl}}/assets/2021-08-01 01_41_43-Window.png)
 
 Now going to cyberchef with the encrypted file and the key, which is ```05``` in hex, We are able to extract the encrypted file
@@ -120,6 +123,7 @@ Flag: ```ASCWG{Mu$1c_$t3g0_@r3_C0o1}```
 Method 2: 
 
 Just open the file with in cyberchef and use XOR bruteforce recipe, and you will get the correct key. :"D
+
 ![]({{site.baseurl}}/assets/2021-08-01%2001_46_52-Window.png)
 
 
@@ -140,9 +144,11 @@ The rabbit hole was in RunMRU path:
 ```HKEY_CURRENT_USER\software\microsoft\windows\currentversion\Explorer\RunMRU```
 
 NOTE: some people faced some hardship opening the file, they needed to open it using notepad++.
+
 ![]({{site.baseurl}}/assets/2021-08-01%2001_53_41-Window.png)
 
-Decoding the base64 value, we get the key, the IV, and the encrypted string, we get the rabbit hole. 
+Decoding the base64 value, we get the key, the IV, and the encrypted string, we get the rabbit hole.
+
 ![]({{site.baseurl}}/assets/2021-08-01%2001_55_41-Window.png)
 
 ![]({{site.baseurl}}/assets/2021-08-01 01_56_46-Window.png)
@@ -150,6 +156,7 @@ Decoding the base64 value, we get the key, the IV, and the encrypted string, we 
 Now we go to the second registry key which is MountedDevices. 
 
 Path: ```HKEY_LOCAL_MACHINE\SYSTEM|MountedDevices```
+
 ![]({{site.baseurl}}/assets/2021-08-01%2001_58_58-Window.png)
 
 And same as before, we decode the base64 string, and then we decrypt the encrypted string and we get the flag.
