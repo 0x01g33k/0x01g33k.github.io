@@ -9,7 +9,8 @@ For the second year in a row I had the honor to write the DF challenges for ASCW
  Description: "let's take things slowly, what's the first thing to do when you get a pic file that has a hidden string in it, in order to extract that string?"
  
  The challenge is extremely easy, looking at the file we get nothing useful
- ![]({{site.baseurl}}/assets/2021-07-30%2001_38_10-Window.png)
+![]({{site.baseurl}}/assets/WhatsApp%20Image%202021-07-30%20at%202.28.34%20AM.jpeg)![WhatsApp Image 2021-07-30 at 2.28.34 AM.jpeg]({{site.baseurl}}/assets/WhatsApp Image 2021-07-30 at 2.28.34 AM.jpeg)
+
 
 I added some memes to the challenges :"D
 
@@ -54,6 +55,7 @@ Reovering that file, and opening it we get a base64 encoded string.
 ![]({{site.baseurl}}/assets/2021-08-01 01_18_39-Window.png)
 
 Base64 string: ```UmFyIRoHAQAzkrXlCgEFBgAFAQGAgAB6Vf0IVQIDPLAABJwAICK6s9qAAwAIRmxhZy50eHQwAQADD532NozZb1ZrgfFV3qU6mBTY3v9TSaZgxr/JrNdVfjTOMSZMYCYwUH0WRQ9bCgMCV5pOPEdl1wGtdkGJEOMt7FX420NCP8UCJzvVrOw8pGZq/BoJnk2YMyD5oIcsrKFygUQdwW+yJ8wdd1ZRAwUEAA==```
+
 Decoding that string using cyberchef, we get some data that shows it's a rar file.
 ![]({{site.baseurl}}/assets/2021-08-01%2001_21_02-Window.png)
 
@@ -72,7 +74,6 @@ then after mounting the disk we recover the delete file and continue with the sa
 
 ![]({{site.baseurl}}/assets/2021-07-30%2018_39_00-Window.png)
 
-![]({{site.baseurl}}/assets/2021-07-30 18_39_00-Window.png)
 
 Description: ```A hacker is intending on leaking some data to his cyber gang, he couldn't evade the security solutions in the company. So he's leaking them via unconventional methods. He also encrypted the file he intends to exfiltrate with a weak encryption scheme that could be bruteforced. Can you find out what he wants to exfiltrate?```
 
@@ -126,7 +127,6 @@ Just open the file with in cyberchef and use XOR bruteforce recipe, and you will
 ![]({{site.baseurl}}/assets/2021-07-30%2018_38_33-Window.png)
 
 Description: ```A hacker was able to gain access to the CEO's machine, he gained access to the machine by using an outdated vulnerable version of XYZ program, the program was used a lot by the CEO. The hacker was able to gain access to the computer physically and was about to get the files he needed but he was caught, can you recover the flag from the reg file?
-
 NOTE: You'll need a key and IV to decrypt the flag, both of which are in front of you when you find what you're looking for.```
 
 This challenge was aimed to be realistic, I wanted the participants to learn and read a thing or two about registry forensics. 
