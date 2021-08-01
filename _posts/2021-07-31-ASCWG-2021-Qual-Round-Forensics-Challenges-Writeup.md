@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 For the second year in a row I had the honor to write the DF challenges for ASCWG 2021
  I've created 5 challenges for this year, some of them were solved in an unintended way, and some solved the way I designed them to be.
