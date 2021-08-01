@@ -5,37 +5,37 @@ For the second year in a row I had the honor to write the DF challenges for ASCW
  I've created 5 challenges for this year, some of them were solved in an unintended way, and some solved the way I designed them to be.
  
  <p>1st Challenge: Warmup-01</p>
- ![]({{site.baseurl}}/_assets/2021-07-30%2018_39_54-Window.png)
+ ![]({{site.baseurl}}/assets/2021-07-30%2018_39_54-Window.png)
  Description: "let's take things slowly, what's the first thing to do when you get a pic file that has a hidden string in it, in order to extract that string?"
  
  The challenge is extremely easy, looking at the file we get nothing useful
- ![]({{site.baseurl}}/_assets/2021-07-30%2001_38_10-Window.png)
+ ![]({{site.baseurl}}/assets/2021-07-30%2001_38_10-Window.png)
 
 I added some memes to the challenges :"D
 
 Using ```exiftool``` we find some interesting stuff
-![2021-07-31 13_24_51-Window.png]({{site.baseurl}}/_assets/2021-07-31 13_24_51-Window.png)
+![2021-07-31 13_24_51-Window.png]({{site.baseurl}}/assets/2021-07-31 13_24_51-Window.png)
 
 Decoding the b64 string we get the flag.
-![]({{site.baseurl}}/_assets/2021-07-31%2013_27_10-Window.png)
+![]({{site.baseurl}}/assets/2021-07-31%2013_27_10-Window.png)
 
 Flag: ```ASCWG{1337_DF1R_1nv3stg@t0R}```
 
 <p>2nd Challenge:Warmup-02</p>
-![2021-07-30 18_39_35-Window.png]({{site.baseurl}}/_assets/2021-07-30 18_39_35-Window.png)
+![2021-07-30 18_39_35-Window.png]({{site.baseurl}}/assets/2021-07-30 18_39_35-Window.png)
 
 Description:```Taking things a bit higher, lets try to get the flag from that hex.```
 Reading the content of the file called warmup-02 we get a hexdump for a rar file. 
-![2021-07-31 13_31_46-Window.png]({{site.baseurl}}/_assets/2021-07-31 13_31_46-Window.png)
+![2021-07-31 13_31_46-Window.png]({{site.baseurl}}/assets/2021-07-31 13_31_46-Window.png)
 
 Converting the hexdump to a rar file and bruteforcing, the rar password "which is cassandra", we get the flag. 
-![2021-07-31 13_33_14-Window.png]({{site.baseurl}}/_assets/2021-07-31 13_33_14-Window.png)
+![2021-07-31 13_33_14-Window.png]({{site.baseurl}}/assets/2021-07-31 13_33_14-Window.png)
 
 Flag: ```ASCWG{H3xDump_1s_EZ}```
 
 <p>3rd Challenge: noobie sysadmin</p>
 
-![]({{site.baseurl}}/_assets/2021-07-30%2018_39_18-Window.png)
+![]({{site.baseurl}}/assets/2021-07-30%2018_39_18-Window.png)
 
 Description: ```A sloppy sysadmin accidently deleted some files from our lulzcorp servers, can you recover the deleted file?```
 
@@ -43,36 +43,36 @@ This challenge could be solved in two different methods, the first way is to rec
 
 Method 1: We download a program called Kernel for VHD, which recovers the deleted data from VHD disks.
 
-![2021-08-01 01_14_01-Window.png]({{site.baseurl}}/_assets/2021-08-01 01_14_01-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01 01_14_01-Window.png)
 
 Then we open the vhd disk in the program, and choose extensive scan. 
 
 Going through the steps of the program, we get the deleted files. 
-![2021-08-01 01_16_28-Window.png]({{site.baseurl}}/_assets/2021-08-01 01_16_28-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01 01_16_28-Window.png)
 
 Reovering that file, and opening it we get a base64 encoded string. 
-![2021-08-01 01_18_39-Window.png]({{site.baseurl}}/_assets/2021-08-01 01_18_39-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01 01_18_39-Window.png)
 
 Base64 string: ```UmFyIRoHAQAzkrXlCgEFBgAFAQGAgAB6Vf0IVQIDPLAABJwAICK6s9qAAwAIRmxhZy50eHQwAQADD532NozZb1ZrgfFV3qU6mBTY3v9TSaZgxr/JrNdVfjTOMSZMYCYwUH0WRQ9bCgMCV5pOPEdl1wGtdkGJEOMt7FX420NCP8UCJzvVrOw8pGZq/BoJnk2YMyD5oIcsrKFygUQdwW+yJ8wdd1ZRAwUEAA==```
 Decoding that string using cyberchef, we get some data that shows it's a rar file.
-![]({{site.baseurl}}/assets/_2021-08-01%2001_21_02-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01%2001_21_02-Window.png)
 
 Downloading that file and bruteforcing its password "which is sage123", and we are able to extract the flag.
-![2021-08-01 01_23_23-Window.png]({{site.baseurl}}/_assets/2021-08-01 01_23_23-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01 01_23_23-Window.png)
 
 Flag:```ASCWG{VHD_F0rens1cs_ar3_Fun}```
 
 Method 2: We can recover the deleted file by mount the VHD disk and recover the file, using any data recovery program.
 
-Using disk management we can mount the VHD disk ![2021-08-01 01_25_39-Window.png]({{site.baseurl}}/_assets/2021-08-01 01_25_39-Window.png)
+Using disk management we can mount the VHD disk ![]({{site.baseurl}}/assets/2021-08-01 01_25_39-Window.png)
 
 then after mounting the disk we recover the delete file and continue with the same steps above.
 
 <p> 4th Challenge: The Possible Dream</p>
 
-![]({{site.baseurl}}/_assets/2021-07-30%2018_39_00-Window.png)
+![]({{site.baseurl}}/assets/2021-07-30%2018_39_00-Window.png)
 
-![]({{site.baseurl}}/_assets/2021-07-30 18_39_00-Window.png)
+![]({{site.baseurl}}/assets/2021-07-30 18_39_00-Window.png)
 
 Description: ```A hacker is intending on leaking some data to his cyber gang, he couldn't evade the security solutions in the company. So he's leaking them via unconventional methods. He also encrypted the file he intends to exfiltrate with a weak encryption scheme that could be bruteforced. Can you find out what he wants to exfiltrate?```
 
@@ -81,11 +81,11 @@ This challenge could be solved in two methods, the first is the intended method,
 Method 1: 
 We look at the file itself, and we notice a meme :"D
 
-![]({{site.baseurl}}/_assets/2021-08-01%2001_29_49-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01%2001_29_49-Window.png)
 
 Well to cut things short, there's no hint that we can get using spectrogram or any other common stego method. We can only use steghide to extract the hidden file.
 
-![2021-08-01 01_35_04-Window.png]({{site.baseurl}}/_assets/2021-08-01 01_35_04-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01 01_35_04-Window.png)
 
 Now we have an encrypted file and we don't know what to do with it, the purpose of this challenge was to make the players write a script to extract LSB and get the key. 
 
