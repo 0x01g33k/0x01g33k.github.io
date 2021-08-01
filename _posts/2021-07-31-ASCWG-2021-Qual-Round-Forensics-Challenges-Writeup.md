@@ -60,6 +60,7 @@ Decoding that string using cyberchef, we get some data that shows it's a rar fil
 ![]({{site.baseurl}}/assets/2021-08-01%2001_21_02-Window.png)
 
 Downloading that file and bruteforcing its password "which is sage123", and we are able to extract the flag.
+
 ![]({{site.baseurl}}/assets/2021-08-01 01_23_23-Window.png)
 
 Flag:```ASCWG{VHD_F0rens1cs_ar3_Fun}```
