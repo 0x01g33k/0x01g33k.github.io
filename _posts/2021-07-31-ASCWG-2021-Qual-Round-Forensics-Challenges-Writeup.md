@@ -104,11 +104,11 @@ print("Sucessfully decoded: "+decoded)
 song.close()
 ```
 Using that script we are able to extract the key. 
-![2021-08-01 01_41_43-Window.png]({{site.baseurl}}/_assets/2021-08-01 01_41_43-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01 01_41_43-Window.png)
 
 Now going to cyberchef with the encrypted file and the key, which is ```05``` in hex, We are able to extract the encrypted file
 
-![]({{site.baseurl}}/_assets/2021-08-01%2001_44_38-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01%2001_44_38-Window.png)
 
 
 Downloading the file and bruteforcing the password, which is ```musicislife```. We get the flag.
@@ -118,12 +118,12 @@ Flag: ```ASCWG{Mu$1c_$t3g0_@r3_C0o1}```
 Method 2: 
 
 Just open the file with in cyberchef and use XOR bruteforce recipe, and you will get the correct key. :"D
-![]({{site.baseurl}}/_assets/2021-08-01%2001_46_52-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01%2001_46_52-Window.png)
 
 
 <p>5th Challenge: Registry Nightmare</p>
 
-![]({{site.baseurl}}/_assets/2021-07-30%2018_38_33-Window.png)
+![]({{site.baseurl}}/assets/2021-07-30%2018_38_33-Window.png)
 
 Description: ```A hacker was able to gain access to the CEO's machine, he gained access to the machine by using an outdated vulnerable version of XYZ program, the program was used a lot by the CEO. The hacker was able to gain access to the computer physically and was about to get the files he needed but he was caught, can you recover the flag from the reg file?
 
@@ -139,21 +139,21 @@ The rabbit hole was in RunMRU path:
 ```HKEY_CURRENT_USER\software\microsoft\windows\currentversion\Explorer\RunMRU```
 
 NOTE: some people faced some hardship opening the file, they needed to open it using notepad++.
-![]({{site.baseurl}}/_assets/2021-08-01%2001_53_41-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01%2001_53_41-Window.png)
 
 Decoding the base64 value, we get the key, the IV, and the encrypted string, we get the rabbit hole. 
-![]({{site.baseurl}}/_assets/2021-08-01%2001_55_41-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01%2001_55_41-Window.png)
 
-![2021-08-01 01_56_46-Window.png]({{site.baseurl}}/_assets/2021-08-01 01_56_46-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01 01_56_46-Window.png)
 
 Now we go to the second registry key which is MountedDevices. 
 
 Path: ```HKEY_LOCAL_MACHINE\SYSTEM|MountedDevices```
-![]({{site.baseurl}}/_assets/2021-08-01%2001_58_58-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01%2001_58_58-Window.png)
 
 And same as before, we decode the base64 string, and then we decrypt the encrypted string and we get the flag.
 
-![]({{site.baseurl}}/_assets/2021-08-01%2002_00_18-Window.png)
+![]({{site.baseurl}}/assets/2021-08-01%2002_00_18-Window.png)
 
 Flag: ```ASCWG{R3g1stry_F0r3ns1c$_1s_Sup3r_C0O1}```
 
