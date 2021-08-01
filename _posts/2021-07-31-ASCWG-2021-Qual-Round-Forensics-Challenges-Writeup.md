@@ -6,7 +6,8 @@ For the second year in a row I had the honor to write the DF challenges for ASCW
  
  <p>1st Challenge: Warmup-01</p>
  ![]({{site.baseurl}}/assets/2021-07-30%2018_39_54-Window.png)
- Description: ```let's take things slowly, what's the first thing to do when you get a pic file that has a hidden string in it, in order to extract that string?```
+ 
+Description: ```let's take things slowly, what's the first thing to do when you get a pic file that has a hidden string in it, in order to extract that string?```
  
  The challenge is extremely easy, looking at the file we get nothing useful
 ![]({{site.baseurl}}/assets/WhatsApp%20Image%202021-07-30%20at%202.28.34%20AM.jpeg)
@@ -45,7 +46,7 @@ Description: ```A sloppy sysadmin accidently deleted some files from our lulzcor
 
 This challenge could be solved in two different methods, the first way is to recover the deleted file via vhd data recovery program. The second method is to mount the vhd disk and recover the deleted file using any data recovery program. I will explain each of these methods.
 
-Method 1: We download a program called Kernel for VHD, which recovers the deleted data from VHD disks.
+Method 1: We download a program called ```Kernel for VHD```, which recovers the deleted data from VHD disks.
 
 ![]({{site.baseurl}}/assets/2021-08-01 01_14_01-Window.png)
 
@@ -59,7 +60,7 @@ Reovering that file, and opening it we get a base64 encoded string.
 
 Base64 string: ```UmFyIRoHAQAzkrXlCgEFBgAFAQGAgAB6Vf0IVQIDPLAABJwAICK6s9qAAwAIRmxhZy50eHQwAQADD532NozZb1ZrgfFV3qU6mBTY3v9TSaZgxr/JrNdVfjTOMSZMYCYwUH0WRQ9bCgMCV5pOPEdl1wGtdkGJEOMt7FX420NCP8UCJzvVrOw8pGZq/BoJnk2YMyD5oIcsrKFygUQdwW+yJ8wdd1ZRAwUEAA==```
 
-Decoding that string using cyberchef, we get some data that shows it's a rar file.
+Decoding that string using ```cyberchef```, we get some data that shows it's a rar file.
 ![]({{site.baseurl}}/assets/2021-08-01%2001_21_02-Window.png)
 
 Downloading that file and bruteforcing its password, which is ```sage123```, and we are able to extract the flag.
@@ -88,7 +89,7 @@ We look at the file itself, and we notice a meme :"D
 
 ![]({{site.baseurl}}/assets/2021-08-01%2001_29_49-Window.png)
 
-Well to cut things short, there's no hint that we can get anything useful by using spectrogram or any other common stego method. We can only use steghide to extract the hidden file.
+Well to cut things short, there's no hint that we can get anything useful by using spectrogram or any other common stego method. We can only use ```steghide``` to extract the hidden file.
 
 ![]({{site.baseurl}}/assets/2021-08-01 01_35_04-Window.png)
 
@@ -113,7 +114,7 @@ Using that script we are able to extract the key.
 
 ![]({{site.baseurl}}/assets/2021-08-01 01_41_43-Window.png)
 
-Now going to cyberchef with the encrypted file and the key, which is ```05``` in hex, We are able to extract the encrypted file
+Now going to ```cyberchef``` with the encrypted file and the key, which is ```05``` in hex, We are able to extract the encrypted file
 
 ![]({{site.baseurl}}/assets/2021-08-01%2001_44_38-Window.png)
 
@@ -145,7 +146,7 @@ To start investigating some reg files regarding an incident, we look into some f
 The rabbit hole was in RunMRU path: 
 ```HKEY_CURRENT_USER\software\microsoft\windows\currentversion\Explorer\RunMRU```
 
-NOTE: some people faced some hardship opening the file, they needed to open it using notepad++.
+NOTE: some people faced some hardship opening the file, they needed to open it using ```notepad++```.
 
 ![]({{site.baseurl}}/assets/2021-08-01%2001_53_41-Window.png)
 
