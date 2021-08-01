@@ -23,10 +23,12 @@ Decoding the b64 string we get the flag.
 Flag: ```ASCWG{1337_DF1R_1nv3stg@t0R}```
 
 <p>2nd Challenge:Warmup-02</p>
+
 ![2021-07-30 18_39_35-Window.png]({{site.baseurl}}/assets/2021-07-30 18_39_35-Window.png)
 
 Description:```Taking things a bit higher, lets try to get the flag from that hex.```
 Reading the content of the file called warmup-02 we get a hexdump for a rar file. 
+
 ![2021-07-31 13_31_46-Window.png]({{site.baseurl}}/assets/2021-07-31 13_31_46-Window.png)
 
 Converting the hexdump to a rar file and bruteforcing, the rar password, which is ```cassandra```, we get the flag. 
@@ -70,7 +72,7 @@ Method 2: We can recover the deleted file by mount the VHD disk and recover the 
 
 Using disk management we can mount the VHD disk ![]({{site.baseurl}}/assets/2021-08-01 01_25_39-Window.png)
 
-then after mounting the disk we recover the delete file and continue with the same steps above.
+then after mounting the disk we recover the deleted file and continue with the same steps above.
 
 <p> 4th Challenge: The Possible Dream</p>
 
