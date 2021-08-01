@@ -137,7 +137,7 @@ Just open the file with in cyberchef and use XOR bruteforce recipe, and you will
 Description: ```A hacker was able to gain access to the CEO's machine, he gained access to the machine by using an outdated vulnerable version of XYZ program, the program was used a lot by the CEO. The hacker was able to gain access to the computer physically and was about to get the files he needed but he was caught, can you recover the flag from the reg file?
 NOTE: You'll need a key and IV to decrypt the flag, both of which are in front of you when you find what you're looking for.```
 
-This challenge was aimed to be realistic, I wanted the participants to learn and read a thing or two about registry forensics. 
+This challenge was designed to be realistic, I wanted the participants to learn and read a thing or two about registry forensics. 
 
 The challenge had one rabbit hole, since it was hard. 
 
