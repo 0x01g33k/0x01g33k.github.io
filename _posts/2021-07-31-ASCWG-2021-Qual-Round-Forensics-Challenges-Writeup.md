@@ -6,7 +6,7 @@ For the second year in a row I had the honor to write the DF challenges for ASCW
  
  <p>1st Challenge: Warmup-01</p>
  ![]({{site.baseurl}}/assets/2021-07-30%2018_39_54-Window.png)
- Description: "let's take things slowly, what's the first thing to do when you get a pic file that has a hidden string in it, in order to extract that string?"
+ Description: ```let's take things slowly, what's the first thing to do when you get a pic file that has a hidden string in it, in order to extract that string?```
  
  The challenge is extremely easy, looking at the file we get nothing useful
 ![]({{site.baseurl}}/assets/WhatsApp%20Image%202021-07-30%20at%202.28.34%20AM.jpeg)
