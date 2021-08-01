@@ -88,7 +88,7 @@ We look at the file itself, and we notice a meme :"D
 
 ![]({{site.baseurl}}/assets/2021-08-01%2001_29_49-Window.png)
 
-Well to cut things short, there's no hint that we can get using spectrogram or any other common stego method. We can only use steghide to extract the hidden file.
+Well to cut things short, there's no hint that we can get anything useful by using spectrogram or any other common stego method. We can only use steghide to extract the hidden file.
 
 ![]({{site.baseurl}}/assets/2021-08-01 01_35_04-Window.png)
 
