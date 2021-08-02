@@ -28,7 +28,7 @@ plugins:
   - jekyll-sitemap
 
 # Custom variables
-owner : "0x01g33k"
+owner : "0x01G33k"
 year : "2021"
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
