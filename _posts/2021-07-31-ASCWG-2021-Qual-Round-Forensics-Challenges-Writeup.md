@@ -56,7 +56,7 @@ Then we open the vhd disk in the program, and choose extensive scan.
 Going through the steps of the program, we get the deleted files. 
 ![]({{site.baseurl}}/assets/2021-08-01 01_16_28-Window.png)
 
-Reovering that file, and opening it we get a base64 encoded string. 
+Recovering that file, and opening it we get a base64 encoded string. 
 ![]({{site.baseurl}}/assets/2021-08-01 01_18_39-Window.png)
 
 Base64 string: ```UmFyIRoHAQAzkrXlCgEFBgAFAQGAgAB6Vf0IVQIDPLAABJwAICK6s9qAAwAIRmxhZy50eHQwAQADD532NozZb1ZrgfFV3qU6mBTY3v9TSaZgxr/JrNdVfjTOMSZMYCYwUH0WRQ9bCgMCV5pOPEdl1wGtdkGJEOMt7FX420NCP8UCJzvVrOw8pGZq/BoJnk2YMyD5oIcsrKFygUQdwW+yJ8wdd1ZRAwUEAA==```
