@@ -59,8 +59,7 @@ Going through the steps of the program, we get the deleted files.
 Recovering that file, and opening it we get a base64 encoded string. 
 ![]({{site.baseurl}}/assets/2021-08-01 01_18_39-Window.png)
 
-Base64 string: ```base64
-UmFyIRoHAQAzkrXlCgEFBgAFAQGAgAB6Vf0IVQIDPLAABJwAICK6s9qAAwAIRmxhZy50eHQwAQADD532NozZb1ZrgfFV3qU6mBTY3v9TSaZgxr/JrNdVfjTOMSZMYCYwUH0WRQ9bCgMCV5pOPEdl1wGtdkGJEOMt7FX420NCP8UCJzvVrOw8pGZq/BoJnk2YMyD5oIcsrKFygUQdwW+yJ8wdd1ZRAwUEAA==```
+Base64 string: ```UmFyIRoHAQAzkrXlCgEFBgAFAQGAgAB6Vf0IVQIDPLAABJwAICK6s9qAAwAIRmxhZy50eHQwAQADD532NozZb1ZrgfFV3qU6mBTY3v9TSaZgxr/JrNdVfjTOMSZMYCYwUH0WRQ9bCgMCV5pOPEdl1wGtdkGJEOMt7FX420NCP8UCJzvVrOw8pGZq/BoJnk2YMyD5oIcsrKFygUQdwW+yJ8wdd1ZRAwUEAA==```
 
 Decoding that string using ```cyberchef```, we get some data that shows it's a rar file.
 ![]({{site.baseurl}}/assets/2021-08-01%2001_21_02-Window.png)
