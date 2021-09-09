@@ -30,9 +30,9 @@ The challenge is relatively easy, we simply need to extract the sent file, to do
 ![2021-09-09 00_26_05-Window.png]({{site.baseurl}}/assets/2021-09-09 00_26_05-Window.png)
 
 
-Then, we notice a conversation between the destination's local IP and another local IP at the source. This conversation is the one we're looking for.
+Then, we notice a conversation between the destination’s local IP and another local IP at the source. This conversation is the one we’re looking for.
 
-Then we follow TCP stream on that conversation, and we are able to see a base64 encoded string.
+Then we follow TCP stream on that conversation, and we can see a base64 encoded string.
 
 ![2021-09-09 00_31_02-Window.png]({{site.baseurl}}/assets/2021-09-09 00_31_02-Window.png)
 
