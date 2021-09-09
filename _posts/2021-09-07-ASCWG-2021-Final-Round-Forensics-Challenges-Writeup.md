@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Hello guys, for the seonc time in a row, I've had the honor of writing the DF challenges for the final round of ASCWG 2021, I've created 6 challenges for this round, 2 of them were warmup challenges, while the other 4 were DF challenges. I hope the players have nejoyed solving these challenges. 
 
@@ -170,5 +170,3 @@ Hashing the PID number which is ```1973``` with the package name we get the flag
 Flag: ```ASCWG{4263bb45bee81173edc3bdd9f03813648ca60036}```
 
 And this concludes the challenges for the final round of ASCWG 2021, I hope the players have learned something new from solving these challenges and hopefully see you again next year.
-
-
