@@ -48,7 +48,8 @@ Flag: ```ASCWG{Netw0rk_F0r1ns3cs_1s_N!c3}```
 
 3rd challenge: ```Archive Lost```
 
-![Archive Lost.png]({{site.baseurl}}/assets/Archive Lost.png)
+![Lost.png]({{site.baseurl}}/assets/Lost.png)
+
 
 Description: ```One of our employees archived some important documents, and he damaged the file in the process. Can you fix the archive to get the file?```
 
@@ -143,6 +144,7 @@ We have an apk file, which is signed, and there's a hidden key in it that encryp
 We need to extract the certificate first, so we change the apk extension to zip.
 
 ![unzip.png]({{site.baseurl}}/assets/unzip.png)
+
 
 Inside the META/INF directory, we get the certificate which its name is HACKED.RSA
 
