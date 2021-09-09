@@ -50,7 +50,7 @@ Flag: ```ASCWG{Netw0rk_F0r1ns3cs_1s_N!c3}```
 
 ![Archive Lost.png]({{site.baseurl}}/assets/Archive Lost.png)
 
-Description: ```One of our employees arvhiced some important documents, and he damaged the file in the process. Can you fix the archive to get the file?```
+Description: ```One of our employees archived some important documents, and he damaged the file in the process. Can you fix the archive to get the file?```
 
 The challenge aims to teach the players about rar file structure and that there are some other magic numbers beyond the first bytes that matter as much as them.
 
@@ -132,9 +132,9 @@ Flag: ```ASCWG{d5c61062aa49378381317b41f097787b1df32508}```
 
 ![2021-09-07 12_28_47-Window.png]({{site.baseurl}}/assets/2021-09-07 12_28_47-Window.png)
 
-Description: ```The villianous APT group known as Dark_Lu1z have injected the CEO of elnaho company phone with their malicious apk file, the company's IR team wasn't able to respond properly to the incident, as the system logs were encrypted with a weak symmetric encryption scheme and the key was hidden in the certificate of the apk. Can you recover the PID and the package name?
+Description: ```The villianous APT group known as Dark_Lu1z have injected the CEO of elnaho company phone with their malicious apk file, the company's IR team wasn't able to respond properly to the incident, as the system logs were encrypted with a weak symmetric encryption scheme and the key was hidden in the certificate of the apk. Can you recover the PID and the package name?```
 
-NOTE: flag format is ASCWG{SHA1sum} the SHA1sum is the hash of the PID:PackageName```
+```NOTE: flag format is ASCWG{SHA1sum} the SHA1sum is the hash of the PID:PackageName```
 
 Okay, so this challenge was aimed to get a new diretion into android forensics. 
 
