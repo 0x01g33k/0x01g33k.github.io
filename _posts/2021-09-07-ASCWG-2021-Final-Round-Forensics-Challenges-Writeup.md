@@ -17,6 +17,8 @@ Hello guys, for the second time in a row, I've had the honor of writing the DF c
 
   Flag: ```ASCWG{Str1ngsS_1s_n1C3}```
   
+  
+  
   2nd challenge: ```Cats are listening``` 
   
   ![cats are listening.png]({{site.baseurl}}/assets/cats are listening.png)
@@ -46,6 +48,8 @@ Yeah I added some memes to the challenges :"D.
 
 Flag: ```ASCWG{Netw0rk_F0r1ns3cs_1s_N!c3}```
 
+
+
 3rd challenge: ```Archive Lost```
 
 ![Lost.png]({{site.baseurl}}/assets/Lost.png)
@@ -64,6 +68,8 @@ We find that the 52 digit needs to be changed to be 01, doing so will enable us 
 Opening the rar archive with the password, we get the flag.
 
 Flag: ```ASCWG{1337_r@R_F0r1ns3c$_An@ly$t}```
+
+
 
 4th challenge: ```I'm not broken, you are.``` 
 
@@ -97,6 +103,8 @@ I'm a solo leveling fan :"D
 Second method: 
 
 Just open the disk img file in R-Studio program and it will repair it by itself :"D
+
+
  
 5th Challenge: ```Lost in PDF```
   
@@ -128,6 +136,8 @@ A new window will appear, we need only to launch the analyzer, a cmd will popup 
 malicious IP: 192.168.197.128
 
 Flag: ```ASCWG{d5c61062aa49378381317b41f097787b1df32508}```
+
+
 
 6th Challenge: ```apRoot```
 
