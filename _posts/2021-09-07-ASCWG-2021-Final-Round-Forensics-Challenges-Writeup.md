@@ -110,4 +110,65 @@ Just open the disk img file in R-Studio program and it will repair it by itself 
   
   ![random.png]({{site.baseurl}}/assets/random.png)
 
-The JS code injected into the PDF is obfuscated, at first glance it appears to be base64; but it's not as the obfuscation is random
+The JS code injected into the PDF is obfuscated, at first glance it appears to be base64; but it's not as the obfuscation is random. So we need to analyze the shellcode.
+
+From the tabs above, we select ```Javascript_UI```, and a new prompt will appear. 
+
+![prompt.png]({{site.baseurl}}/assets/prompt.png)
+
+Now we select the shellcode from within the double quotes for analysis, and from the tabs above we select ```shellcode_analysis``` , and from the drop down menu, we select ```sclog```.
+
+A new window will appear, we need only to launch the analyzer, a cmd will popup with the IP and port.
+
+![analyze.png]({{site.baseurl}}/assets/analyze.png)
+
+
+![prompt-II.png]({{site.baseurl}}/assets/prompt-II.png)
+
+malicious IP: 192.168.197.128
+
+Flag: ```ASCWG{d5c61062aa49378381317b41f097787b1df32508}```
+
+<p>6th Challenge: apRoot</p>
+
+![2021-09-07 12_28_47-Window.png]({{site.baseurl}}/assets/2021-09-07 12_28_47-Window.png)
+
+Description: ```The villianous APT group known as Dark_Lu1z have injected the CEO of elnaho company phone with their malicious apk file, the company's IR team wasn't able to respond properly to the incident, as the system logs were encrypted with a weak symmetric encryption scheme and the key was hidden in the certificate of the apk. Can you recover the PID and the package name?
+
+NOTE: flag format is ASCWG{SHA1sum} the SHA1sum is the hash of the PID:PackageName```
+
+Okay, so this challenge was aimed to get a new diretion into android forensics. 
+
+We have an apk file, which is signed, and there's a hidden key in it that encrypted the system logs. 
+
+We need to extract the certificate first, so we change the apk extension to zip.
+
+![unzip.png]({{site.baseurl}}/_posts/unzip.png)
+
+Inside the META/INF directory, we get the certificate which its name is HACKED.RSA
+
+![rsa.png]({{site.baseurl}}/_posts/rsa.png)
+
+Now the real thing begins, we need to extract the certificate details, so we will use this command ```openssl pkcs7 -inform DER -in HACKED.RSA -noout -print_certs -text```
+
+![rsa-II.png]({{site.baseurl}}/assets/rsa-II.png)
+
+![rsa-iii.png]({{site.baseurl}}/assets/rsa-iii.png)
+
+In order to decrypt the file we need to split the X509v3 key identifier, The encryption scheme used to encrypt the logs was RC2. The key was: ```53:63:8E:5D:75:79:3C:17:0B:07:C4```, and the IV: ```:11:2C:A5:4A:F7:25:B6:43:15```
+
+Now, we go to cyberchef and decrypt the file. 
+![decrypt.png]({{site.baseurl}}/assets/decrypt.png)
+
+We download the file, and we look it up for the package name, which can be found in ```AndroidManifest.xml``` file. The package name is: ```com.metasploit.stage```
+
+![Hash.png]({{site.baseurl}}/assets/Hash.png)
+
+Hashing the PID number which is ```1973``` with the package name we get the flag.
+![hash-2.png]({{site.baseurl}}/assets/hash-2.png)
+
+Flag: ```ASCWG{4263bb45bee81173edc3bdd9f03813648ca60036}```
+
+And this concludes the challenges for the final round of ASCWG 2021, I hope the players have learned something new from solving these challenges and hopefully see you again next year.
+
+
