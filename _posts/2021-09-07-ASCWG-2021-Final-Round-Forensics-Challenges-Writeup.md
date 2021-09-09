@@ -91,6 +91,23 @@ Then we can mount the disk normally, and view its contents.
 ![fixed.png]({{site.baseurl}}/_posts/fixed.png)
 
 Flag: ```ASCWG{B@ckup_Sup3rB10ck$_@r3_l!f3_Sav3r$```
- I'm a solo leveling fan :"D
-<p> 5th Challenge: 
 
+I'm a solo leveling fan :"D
+
+Second method: 
+
+Just open the disk img file in R-Studio program and it will repair it by itself :"D
+ 
+<p> 5th Challenge: ```Lost in PDF```</p>
+  
+  ![Lost.png]({{site.baseurl}}/_posts/Lost.png)
+  
+  Description: ```A hacker managed to send a malicious PDF file to NullzCorp's CEO, the file was executed and the hacker was able to get into the machine. Can you recover the IP of the hacker's machine?```
+  
+  Okay so we have a malicious PDF file, which has the flag. We need to see the injected code into the PDF file, to do so we can use multiple tools such as ```pdf-parser```, ```ppdf``` but none of them will be useful beyond that. The tool we need to use it is called [PDF stream dumper](http://sandsprite.com/blogs/index.php?uid=7&pid=57)
+  
+  Downloaing the tool, and opening the file in it we will notice something interesting.
+  
+  ![random.png]({{site.baseurl}}/assets/random.png)
+
+The JS code injected into the PDF is obfuscated, at first glance it appears to be base64; but it's not as the obfuscation is random
