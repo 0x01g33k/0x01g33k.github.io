@@ -32,15 +32,16 @@ The challenge is relatively easy, we simply need to extract the sent file, to do
 Then, we notice a conversation between the destination's local IP and another local IP at the source. This conversation is the one we're looking for.
 
 Then we follow TCP stream on that conversation, and we are able to see a base64 encoded string.
-![]({{site.baseurl}}/assets/2021-09-09%2000_31_02-Window.png)
+
 ![2021-09-09 00_31_02-Window.png]({{site.baseurl}}/assets/2021-09-09 00_31_02-Window.png)
 
 Then we copy the contents to [cyberchef](https://gchq.github.io/CyberChef), and we decode the string to get a PNG file. 
-![]({{site.baseurl}}/assets/2021-09-09%2000_33_31-Window.png)![2021-09-09 00_33_31-Window.png]({{site.baseurl}}/assets/2021-09-09 00_33_31-Window.png)
+
+![2021-09-09 00_33_31-Window.png]({{site.baseurl}}/assets/2021-09-09 00_33_31-Window.png)
 
 Downloading the file, we get the flag.
 
-![]({{site.baseurl}}/assets/2021-09-09%2000_34_51-Window.png)![2021-09-09 00_34_51-Window.png]({{site.baseurl}}/assets/2021-09-09 00_34_51-Window.png)
+![2021-09-09 00_34_51-Window.png]({{site.baseurl}}/assets/2021-09-09 00_34_51-Window.png)
 
 Yeah I added some memes to the challenges :"D.
 
@@ -48,7 +49,6 @@ Flag: ```ASCWG{Str1ngsS_1s_n1C3}```
 
 <p> 3rd challenge: Archive Lost</p>
 
-![]({{site.baseurl}}/assets/Archive%20Lost.png)
 ![Archive Lost.png]({{site.baseurl}}/assets/Archive Lost.png)
 
 Description: ```One of our employees arvhiced some important documents, and he damaged the file in the process. Can you fix the archive to get the file?```
@@ -77,7 +77,7 @@ First of this challenge could be solved in two different methods, the first of w
 
 We simply need to fix the primary superblock to make the filesystem readable.
 
-![]({{site.baseurl}}/assets/bad_superblock.png)![bad_superblock.png]({{site.baseurl}}/assets/bad_superblock.png)
+![bad_superblock.png]({{site.baseurl}}/assets/bad_superblock.png)
 
 Now, we need to fix the disk, so we need to execute this command first ```sudo dd if=sdb1.img of=/dev/sdb1 bs=1k conv=noerror```
 
