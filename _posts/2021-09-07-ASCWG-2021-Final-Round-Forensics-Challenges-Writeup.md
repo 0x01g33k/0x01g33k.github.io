@@ -17,7 +17,7 @@ Hello guys, for the second time in a row, I've had the honor of writing the DF c
 
   Flag: ```ASCWG{Str1ngsS_1s_n1C3}```
   
-  <p> 2nd challenge: ```Cats are listening``` </p>
+  2nd challenge: ```Cats are listening``` 
   
   ![cats are listening.png]({{site.baseurl}}/assets/cats are listening.png)
 
@@ -46,7 +46,7 @@ Yeah I added some memes to the challenges :"D.
 
 Flag: ```ASCWG{Netw0rk_F0r1ns3cs_1s_N!c3}```
 
-<p> 3rd challenge: Archive Lost</p>
+3rd challenge: ```Archive Lost```
 
 ![Archive Lost.png]({{site.baseurl}}/assets/Archive Lost.png)
 
@@ -64,7 +64,7 @@ Opening the rar archive with the password, we get the flag.
 
 Flag: ```ASCWG{1337_r@R_F0r1ns3c$_An@ly$t}```
 
-<p> 4th challenge: ```I'm not broken, you are.``` </p>
+4th challenge: ```I'm not broken, you are.``` 
 
 ![broken.png]({{site.baseurl}}/assets/broken.png)
 
@@ -97,7 +97,7 @@ Second method:
 
 Just open the disk img file in R-Studio program and it will repair it by itself :"D
  
-<p> 5th Challenge: ```Lost in PDF```</p>
+5th Challenge: ```Lost in PDF```
   
   ![Lost.png]({{site.baseurl}}/assets/Lost.png)
   
@@ -128,7 +128,7 @@ malicious IP: 192.168.197.128
 
 Flag: ```ASCWG{d5c61062aa49378381317b41f097787b1df32508}```
 
-<p>6th Challenge: apRoot</p>
+6th Challenge: ```apRoot```
 
 ![2021-09-07 12_28_47-Window.png]({{site.baseurl}}/assets/2021-09-07 12_28_47-Window.png)
 
