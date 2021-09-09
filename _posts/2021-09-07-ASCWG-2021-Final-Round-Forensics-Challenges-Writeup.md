@@ -141,11 +141,11 @@ We have an apk file, which is signed, and there's a hidden key in it that encryp
 
 We need to extract the certificate first, so we change the apk extension to zip.
 
-![unzip.png]({{site.baseurl}}/_posts/unzip.png)
+![unzip.png]({{site.baseurl}}/assets/unzip.png)
 
 Inside the META/INF directory, we get the certificate which its name is HACKED.RSA
 
-![rsa.png]({{site.baseurl}}/_posts/rsa.png)
+![rsa.png]({{site.baseurl}}/assets/rsa.png)
 
 Now the real thing begins, we need to extract the certificate details, so we will use this command ```openssl pkcs7 -inform DER -in HACKED.RSA -noout -print_certs -text```
 
