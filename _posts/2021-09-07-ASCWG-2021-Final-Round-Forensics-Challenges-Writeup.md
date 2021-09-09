@@ -112,7 +112,7 @@ Just open the disk img file in R-Studio program and it will repair it by itself 
   
   Description: ```A hacker managed to send a malicious PDF file to NullzCorp's CEO, the file was executed and the hacker was able to get into the machine. Can you recover the IP of the hacker's machine?```
   
-  Okayو so we have a malicious PDF file, which has the flag. We need to see the injected code into the PDF file, to do so we can use multiple tools such as ```pdf-parser```, ```ppdf``` but none of them will be useful beyond that. The tool we need to use is called [PDF stream dumper](http://sandsprite.com/blogs/index.php?uid=7&pid=57)
+  Okay, so we have a malicious PDF file, which has the flag. We need to see the injected code into the PDF file, to do so we can use multiple tools such as ```pdf-parser```, ```ppdf``` but none of them will be useful beyond that. The tool we need to use is called [PDF stream dumper](http://sandsprite.com/blogs/index.php?uid=7&pid=57)
   
   Downloading the tool, and opening the file in it we will notice something interesting.
   
