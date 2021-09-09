@@ -44,7 +44,7 @@ Downloading the file, we get the flag.
 
 Yeah I added some memes to the challenges :"D.
 
-Flag: ```ASCWG{Str1ngsS_1s_n1C3}```
+Flag: ```ASCWG{Netw0rk_F0r1ns3cs_1s_N!c3}```
 
 <p> 3rd challenge: Archive Lost</p>
 
