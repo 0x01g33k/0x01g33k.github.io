@@ -68,7 +68,6 @@ Flag: ```ASCWG{1337_r@R_F0r1ns3c$_An@ly$t}```
 
 <p> 4th challenge: ```I'm not broken, you are.``` </p>
 
-![]({{site.baseurl}}/assets/broken.png)
 ![broken.png]({{site.baseurl}}/assets/broken.png)
 
 Description: ```During an IR investigation our junior IR engineer screwed up the filesystem, which has the evidence to imprison the notorious cyber criminal Adel Shakal. Can you fix the img and retrieve the file?```
@@ -80,4 +79,18 @@ First of this challenge could be solved in two different methods, the first of w
 We simply need to fix the primary superblock to make the filesystem readable.
 
 ![]({{site.baseurl}}/assets/bad_superblock.png)![bad_superblock.png]({{site.baseurl}}/assets/bad_superblock.png)
+
+Now, we need to fix the disk, so we need to execute this command first ```sudo dd if=sdb1.img of=/dev/sdb1 bs=1k conv=noerror```
+
+![repair-I.png]({{site.baseurl}}/assets/repair-I.png)
+
+Then we need to execute another command ```sudo fsck /dev/sdb1```
+![repair-II.png]({{site.baseurl}}/assets/repair-II.png)
+
+Then we can mount the disk normally, and view its contents. 
+![fixed.png]({{site.baseurl}}/_posts/fixed.png)
+
+Flag: ```ASCWG{B@ckup_Sup3rB10ck$_@r3_l!f3_Sav3r$```
+ I'm a solo leveling fan :"D
+<p> 5th Challenge: 
 
