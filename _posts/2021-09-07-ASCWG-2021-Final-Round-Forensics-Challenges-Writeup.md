@@ -88,6 +88,7 @@ Then we need to execute another command ```sudo fsck /dev/sdb1```
 Then we can mount the disk normally, and view its contents. 
 ![fixed.png]({{site.baseurl}}/assets/fixed.png)
 
+
 Flag: ```ASCWG{B@ckup_Sup3rB10ck$_@r3_l!f3_Sav3r$```
 
 I'm a solo leveling fan :"D
