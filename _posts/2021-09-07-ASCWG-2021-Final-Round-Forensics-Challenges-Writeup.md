@@ -26,8 +26,7 @@ Description: ```Now let's try to get the flag from the pcap file.```
 
 The challenge is relatively easy, we simply need to extract the sent file, to do so we need to check the conversations in this pcap file. We do so by opening the file in wireshark.
 
-![]({{site.baseurl}}/assets/2021-09-09%2000_26_05-Window.png)![2021-09-09 00_26_05-Window.png]({{site.baseurl}}/assets/2021-09-09 00_26_05-Window.png)
-
+![2021-09-09 00_26_05-Window.png]({{site.baseurl}}/assets/2021-09-09 00_26_05-Window.png)
 
 
 Then, we notice a conversation between the destination's local IP and another local IP at the source. This conversation is the one we're looking for.
