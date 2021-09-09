@@ -118,7 +118,7 @@ Just open the disk img file in R-Studio program and it will repair it by itself 
   
   ![random.png]({{site.baseurl}}/assets/random.png)
 
-The JS code injected into the PDF is obfuscated, at first glance, it appears to be base64, but it's not as the obfuscation is random. So we need to analyze the shellcode.
+The JS code injected into the PDF is obfuscated, and the obfuscation is random. So we need to analyze the shellcode.
 
 From the tabs above, we select ```Javascript_UI```, and a new prompt will appear. 
 
