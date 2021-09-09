@@ -19,7 +19,6 @@ Hello guys, for the second time in a row, I've had the honor of writing the DF c
   
   <p> 2nd challenge: ```Cats are listening``` </p>
   
-  ![]({{site.baseurl}}/assets/cats%20are%20listening.png)
   ![cats are listening.png]({{site.baseurl}}/assets/cats are listening.png)
 
 Description: ```Now let's try to get the flag from the pcap file.```
