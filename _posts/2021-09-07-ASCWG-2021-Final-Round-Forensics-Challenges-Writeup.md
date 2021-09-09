@@ -77,9 +77,9 @@ Flag: ```ASCWG{1337_r@R_F0r1ns3c$_An@ly$t}```
 
 Description: ```During an IR investigation our junior IR engineer screwed up the filesystem, which has the evidence to imprison the notorious cyber criminal Adel Shakal. Can you fix the img and retrieve the file?```
 
-This challenge aims to teach the players about linux filesystem structure forensics and how to repair them.
+This challenge aims to teach the players about Linux filesystem structure forensics and how to repair them.
 
-First of this challenge could be solved in two different methods, the first of which is the intended method, which I will explain, and the second one was discovered by the king of the unintended methods :"D [Mohammed Hassan](https://0xmohammed.github.io) so big shout out to him for discovering it, and I will explain it below.
+First of this challenge could be solved in two different methods, the first of which is the intended method, which I will explain, and the second one was discovered by the king of the unintended methods :"D [Mohammed Hassan](https://0xmohammed.github.io) a big shout out to him for discovering it, and I will explain it below.
 
 We simply need to fix the primary superblock to make the filesystem readable.
 
@@ -112,19 +112,19 @@ Just open the disk img file in R-Studio program and it will repair it by itself 
   
   Description: ```A hacker managed to send a malicious PDF file to NullzCorp's CEO, the file was executed and the hacker was able to get into the machine. Can you recover the IP of the hacker's machine?```
   
-  Okay so we have a malicious PDF file, which has the flag. We need to see the injected code into the PDF file, to do so we can use multiple tools such as ```pdf-parser```, ```ppdf``` but none of them will be useful beyond that. The tool we need to use it is called [PDF stream dumper](http://sandsprite.com/blogs/index.php?uid=7&pid=57)
+  Okayو so we have a malicious PDF file, which has the flag. We need to see the injected code into the PDF file, to do so we can use multiple tools such as ```pdf-parser```, ```ppdf``` but none of them will be useful beyond that. The tool we need to use is called [PDF stream dumper](http://sandsprite.com/blogs/index.php?uid=7&pid=57)
   
-  Downloaing the tool, and opening the file in it we will notice something interesting.
+  Downloading the tool, and opening the file in it we will notice something interesting.
   
   ![random.png]({{site.baseurl}}/assets/random.png)
 
-The JS code injected into the PDF is obfuscated, at first glance it appears to be base64; but it's not as the obfuscation is random. So we need to analyze the shellcode.
+The JS code injected into the PDF is obfuscated, at first glance, it appears to be base64, but it's not as the obfuscation is random. So we need to analyze the shellcode.
 
 From the tabs above, we select ```Javascript_UI```, and a new prompt will appear. 
 
 ![prompt.png]({{site.baseurl}}/assets/prompt.png)
 
-Now we select the shellcode from within the double quotes for analysis, and from the tabs above we select ```shellcode_analysis``` , and from the drop down menu, we select ```sclog```.
+Now we select the shellcode from within the double quotes for analysis, and from the tabs above we select ```shellcode_analysis``` , and from the drop-down menu, we select ```sclog```.
 
 A new window will appear, we need only to launch the analyzer, a cmd will popup with the IP and port.
 
@@ -147,7 +147,7 @@ Description: ```The villianous APT group known as Dark_Lu1z have injected the CE
 
 ```NOTE: flag format is ASCWG{SHA1sum} the SHA1sum is the hash of the PID:PackageName```
 
-Okay, so this challenge was aimed to get a new diretion into android forensics. 
+Okay, so this challenge was aimed to get a new direction into android forensics. 
 
 We have an apk file, which is signed, and there's a hidden key in it that encrypted the system logs. 
 
