@@ -63,7 +63,7 @@ Attempting to open the rar file, we get a prompt that says it's corrupt, we try 
 ![weird.png]({{site.baseurl}}/assets/weird.png)
 
 Now, we need to fix the magic numbers. Going to that [link](https://docs.fileformat.com/compression/rar/)
-We find that the 52 digit needs to be changed to be 01, doing so will enable us to open the rar archive but we need a password. The password is ```mollycat```, the password number 40001 in rockyou.txt.
+We find that the 52 digit needs to be changed to 01, doing so will enable us to open the rar archive but we need a password. The password is ```mollycat```, the password number 40001 in rockyou.txt.
 
 Opening the rar archive with the password, we get the flag.
 
