@@ -98,7 +98,7 @@ Just open the disk img file in R-Studio program and it will repair it by itself 
  
 <p> 5th Challenge: ```Lost in PDF```</p>
   
-  ![Lost.png]({{site.baseurl}}/_posts/Lost.png)
+  ![Lost.png]({{site.baseurl}}/assets/Lost.png)
   
   Description: ```A hacker managed to send a malicious PDF file to NullzCorp's CEO, the file was executed and the hacker was able to get into the machine. Can you recover the IP of the hacker's machine?```
   
