@@ -7,7 +7,7 @@ Hello guys, for the second year in a row, I've had the honor of writing the DF c
   
   ![strings_attached.png]({{site.baseurl}}/assets/strings_attached.png)
  
-  The challenge is extremely easy and aims at teaching the players to learn the basic usage of ```strings``` utility in linux. 
+  The challenge is extremely easy and aims at teaching the players the basic usage of ```strings``` utility in linux. 
   
   ![strings.png]({{site.baseurl}}/assets/strings.png)
 
