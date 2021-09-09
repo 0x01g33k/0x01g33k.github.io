@@ -72,7 +72,7 @@ Description: ```During an IR investigation our junior IR engineer screwed up the
 
 This challenge aims to teach the players about linux filesystem structure forensics and how to repair them.
 
-First of this challenge could be solved in two different methods, the first of which is the intended method, which I will explain, and the second one was discovered by the king of the unintended methods :"D [Mohammed Hassan](https://0xmohammed.github.io) so big shout out to him for discovering it, and I will explaing it below.
+First of this challenge could be solved in two different methods, the first of which is the intended method, which I will explain, and the second one was discovered by the king of the unintended methods :"D [Mohammed Hassan](https://0xmohammed.github.io) so big shout out to him for discovering it, and I will explain it below.
 
 We simply need to fix the primary superblock to make the filesystem readable.
 
