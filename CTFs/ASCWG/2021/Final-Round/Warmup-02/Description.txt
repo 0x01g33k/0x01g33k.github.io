@@ -1,0 +1,3 @@
+Now let's try to get the flag from the pcap file.
+
+Challenge Name: Cats are listening

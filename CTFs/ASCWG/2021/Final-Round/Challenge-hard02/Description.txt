@@ -1,0 +1,5 @@
+The villianous APT group known as Dark_Lu1z have injected the CEO of elnaho company phone with their malicious apk file, the company's IR team wasn't able to respond properly to the incident, as the system logs were encrypted with a weak symmetric encryption scheme and the key was hidden in the certificate of the apk. Can you recover the PID and the package name?
+
+NOTE: flag format is ASCWG{SHA1sum} the SHA1sum is the hash of the PID:PackageName
+
+challenge difficulty: hard

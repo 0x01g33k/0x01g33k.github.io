@@ -1,0 +1,5 @@
+A hacker managed to send a malicious PDF file to NullzCorp's CEO, the file was executed and the hacker was able to get into the machine. Can you recover the IP of the hacker's machine?
+
+NOTE: The flag is the SHA-1 Sum of the IP.
+
+Challenge Name: Lost in PDF
