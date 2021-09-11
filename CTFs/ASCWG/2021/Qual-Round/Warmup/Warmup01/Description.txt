@@ -1,0 +1,1 @@
+let's take things slowly, what's the first thing to do when you get a pic file that has a hidden string in it, in order to extract that string?

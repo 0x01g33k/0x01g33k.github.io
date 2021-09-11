@@ -1,0 +1,4 @@
+A hacker is intending on leaking some data to his cyber gang, he couldn't evade the security solutions in the company. So he's leaking them via unconventional methods. He also encrypted the file he intends to exfiltrate with a weak encryption scheme that could be bruteforced. Can you find out what he wants to exfiltrate?
+
+Challenge Name: "The_Not_So_Impossible_Dream"
+
