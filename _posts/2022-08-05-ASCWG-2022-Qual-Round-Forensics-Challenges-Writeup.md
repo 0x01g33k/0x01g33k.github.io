@@ -57,3 +57,73 @@ Flag: ```ASCWG{M4C_4N6_1$_Co0l}```
 
 4th Challenge: ```Persistent Ghost```
 
+![Persistent Ghost.png]({{site.baseurl}}/assets/Persistent Ghost.png)
+
+
+This challenge was aiming to teach participants about persistence in registry.
+
+The keys in question were: 
+
+1.```HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run```
+2.```HKEY_USERS\SOFTWARE\Microsoft\Windows\CurrentVersion\Run```
+3.```HKEY_USERS\SOFTWARE\Microsoft\Windows\CurrentVersion\Screensavers\ssText3d\Screen 3```
+There was a rabbit hole located in the bootexecute key, the rabbit hole was this picture :"D
+![medium-challenge.png]({{site.baseurl}}/assets/medium-challenge.png)
+
+Going for the refistry keys mentioned above we are able to collect 3 pieces of B64 encoded string, they are located in part-I
+![Persistent Ghost-S1.png]({{site.baseurl}}/assets/Persistent Ghost-S1.png)
+
+Collecting the 3 parts from the 3 keys, we get the following B64 encoded code.
+![Persistent Ghost-S2.png]({{site.baseurl}}/assets/Persistent Ghost-S2.png)
+
+Flag: ```ASCWG{P3rs1stenc3_1s1337_Hackerz_sk1llz}```
+
+5th Challenge: ``` Walk Down Memory Lane```
+
+![Walk Down Memory Lane.png]({{site.baseurl}}/assets/Walk Down Memory Lane.png)
+
+In this challenge I was aiming to make participants read and learn about windbg from memory analysis prospective. 
+
+To solve this challenge we need to set up our environment, we need to import the proper symbols to interpret the memory dump we're about to analyze. 
+
+![windbg-1.png]({{site.baseurl}}/_assets/windbg-1.png)
+![windbg-2.png]({{site.baseurl}}/assets/windbg-2.png)
+
+We import the symbols from microsoft.
+
+We then import the .DMP file as a crash dump, and let's start analyzing. 
+
+![windbg-3.png]({{site.baseurl}}/assets/windbg-3.png)
+
+We click or type on the command in front of us ```!analyze -v``` and let the debugger starts analyzing the dump, after it finishes, we type the following command which will display a formatted view of the information in the process environment block.
+
+![windbg-4.png]({{site.baseurl}}/assets/windbg-4.png)
+
+After looking at the DLLs, we need to list the modules used by the process we type command ``` lm f```
+
+![windbg-5.png]({{site.baseurl}}/assets/windbg-5.png)
+
+the module we're looking for is the ```iertutil.dll```
+
+Clicking on its hyperlink, we get the memory address inwhich it stores its data.
+
+![windbg-6.png]({{site.baseurl}}/assets/windbg-6.png)
+
+Perfect, now we have the address let's search this dump for anything related to the flag in question, since the flag format start with ASCWG, then we can look for it.
+![windbg-7.png]({{site.baseurl}}/assets/windbg-7.png)
+
+Now let's dump the memory contents resided in this address, to do so accurately we need either to go forward or backward a little bit, after some going back and forth, we can get the full data by dumping the memory from the addresses mentioned below. 
+
+![windbg-8.png]({{site.baseurl}}/assets/windbg-8.png)
+
+Flag:```ASCWG{W1ndbG_!$_Sup3R_C0o1}```
+
+6th Challenge:```Walk down memory lane 2```
+
+We follow the same steps as the previous challenge, except for the following:
+
+![windbg-10.png]({{site.baseurl}}/assets/windbg-10.png)
+![]({{site.baseurl}}/assets/windbg-11.png)
+
+
+And this concludes the challenges I created for ASCWG Qual round, I hope the players enjoyed solving them and learned some new things or techniques.
