@@ -86,7 +86,8 @@ In this challenge I was aiming to make participants read and learn about windbg 
 
 To solve this challenge we need to set up our environment, we need to import the proper symbols to interpret the memory dump we're about to analyze. 
 
-![windbg-1.png]({{site.baseurl}}/_assets/windbg-1.png)
+![windbg-1.png]({{site.baseurl}}/assets/windbg-1.png)
+
 ![windbg-2.png]({{site.baseurl}}/assets/windbg-2.png)
 
 We import the symbols from microsoft.
