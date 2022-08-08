@@ -88,6 +88,7 @@ To solve this challenge we need to set up our environment, we need to import the
 
 ![windbg-1.png]({{site.baseurl}}/assets/windbg-1.png)
 
+
 ![windbg-2.png]({{site.baseurl}}/assets/windbg-2.png)
 
 We import the symbols from microsoft.
