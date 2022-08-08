@@ -70,7 +70,7 @@ The keys in question were:
 There was a rabbit hole located in the bootexecute key, the rabbit hole was this picture :"D
 ![medium-challenge.png]({{site.baseurl}}/assets/medium-challenge.png)
 
-Going for the refistry keys mentioned above we are able to collect 3 pieces of B64 encoded string, they are located in part-I
+Going for the registry keys mentioned above we are able to collect 3 pieces of B64 encoded string, they are located in part-I
 ![Persistent Ghost-S1.png]({{site.baseurl}}/assets/Persistent Ghost-S1.png)
 
 Collecting the 3 parts from the 3 keys, we get the following B64 encoded code.
