@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 							ASCWG 2022 Qual Round Forensics Challenges Writeup
 
