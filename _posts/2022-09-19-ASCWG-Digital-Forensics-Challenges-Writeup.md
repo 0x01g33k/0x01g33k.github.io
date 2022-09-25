@@ -127,6 +127,7 @@ Now open the file and get the key.
 ![2022-09-25 02_27_31-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 02_27_31-Ubuntu-Test - VMware Workstation.png)
 
 Now to decrypt the encrypted text.
+
 ![2022-09-25 02_24_36-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 02_24_36-Ubuntu-Test - VMware Workstation.png)
 
 Flag:```ASCWG{N0t_@11_f!l3_Sy$tems_@r3_th3_s@m3}```
