@@ -90,7 +90,7 @@ Now we need to investigate further, we use ```linux_volshell``` plugin.
 
 ![2022-09-25 01_51_16-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 01_51_16-Ubuntu-Test - VMware Workstation.png)
 
-Then we use cc() command to investigate the process ins question, we type the following command.
+Then we use cc() command to investigate the process in question, we type the following command.
 ```cc(offset=0x0000000011bd2f80, pid=2036, name=None, physical=False)```
 
 ![2022-09-25 01_52_29-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 01_52_29-Ubuntu-Test - VMware Workstation.png)
