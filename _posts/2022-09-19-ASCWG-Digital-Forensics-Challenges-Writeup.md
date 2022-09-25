@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Hello guys, for the 3rd year in a row I had the honor of writing the digital forensics challenges for Arab Security Cyber War Games 2022, this year I wanted the challenges a bit more realistic and level up the competition's atmosphere. I created 5 challenges for the final round, 2 of them are warmup challenges. Without any further a due, let's get into things.
 
