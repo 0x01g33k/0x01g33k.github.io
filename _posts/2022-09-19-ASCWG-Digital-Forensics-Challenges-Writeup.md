@@ -4,11 +4,13 @@ published: true
 Hello guys, for the 3rd year in a row I had the honor of writing the digital forensics challenges for Arab Security Cyber War Games 2022, this year I wanted the challenges a bit more realistic and level up the competition's atmosphere. I created 5 challenges for the final round, 2 of them are warmup challenges. Without any further a due, let's get into things.
 
 1st Warmup Challenge: 
+
 ![Warmup-1.PNG]({{site.baseurl}}/assets/Warmup-1.PNG)
 
 Description:```someone encrypted the drive, could you get the key?```
 
 In this challenge, it's quite clear we are dealing with some sort of disk encryption keys stored in memory. 
+
 ![2022-09-24 23_37_40-Kali Linux - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-24 23_37_40-Kali Linux - VMware Workstation.png)
 now we need to use the provided profile, which is ```Win7SP1x64``` and use bitlocker plugin to get the bitlocker key. 
 
@@ -25,20 +27,24 @@ Description:```During the data acquisition of a cyber criminal's sim card, the e
 Okay, this is a new challenge I wanted the participants to learn about SIM card forensics, Oxygen Forensics tool, and how to think and act if they got a corrupted case file during a real DF investigation.
 
 Upon opening the ```.ofbx``` file in ```oxyviewer.exe```, we get a notification saying the file is corrupted. 
+
 ![2022-09-25 00_16_43-Win10 Pro - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 00_16_43-Win10 Pro - VMware Workstation.png)
 
 Okay, we need to take a step back to fix the file, so we need to open it in a hex editor.
+
 ![2022-09-25 00_18_00-Win10 Pro - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 00_18_00-Win10 Pro - VMware Workstation.png)
 
 At first glance, we notice the file is missing its magic bytes, if we looked for these specific magic bytes online, we won't find them. However, if we attempted to search _differently_, we can look up similar files with the same magic bytes. 
 
 The file in question is _```zip archive```_ and its magic bytes are ```50 4b 03 04```, additionally we can look up the header of the file, which will provide us with the first values, and they are ```PK..```
+
 ![2022-09-25 00_28_40-Win10 Pro - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 00_28_40-Win10 Pro - VMware Workstation.png)
 ![2022-09-25 00_31_03-Win10 Pro - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 00_31_03-Win10 Pro - VMware Workstation.png)
 
 Now after fixing the file, we need to use the ICCID number to get the account number linked to this SIM Card, the ICCID number is ```89410116224705323469```. Now we supply that number into any ICCID tracker, such as [phone.fyicenter.com](http://phone.fyicenter.com/1155_ICCID_SIM_Card_Number_Checker_Decoder.html)
 
 Then we get the account number which is ```1622470532346``` 
+
 ![2022-09-25 00_35_41-Win10 Pro - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 00_35_41-Win10 Pro - VMware Workstation.png)
 
 Flag:```ASCWG{1622470532346}```
@@ -51,9 +57,11 @@ Description:```our new trainee was practicing on BoF, he accidentally crashed th
 
 Okay, in this challenge I wanted the participants learn about utilizing windbg, or any debugger of their preference. 
 We start by analyzing the crash dump, first, we need to download or import the symbols, we do so by typing this command ``` srv*https://msdl.microsoft.com/download/symbols```, then we start analyzing the file.
+
 ![2022-09-25 00_45_45-Win10 Pro - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 00_45_45-Win10 Pro - VMware Workstation.png)
 
 Now, let's get down to the real business, the target here is to get the return address of ```wow64ldrinitialize```, we simply need to dump the stack. We type the following command ```kb```.
+
 ![2022-09-25 00_47_44-Win10 Pro - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 00_47_44-Win10 Pro - VMware Workstation.png)
 
 Flag:```ASCWG{cf6039c7}```
