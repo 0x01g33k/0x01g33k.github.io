@@ -87,10 +87,12 @@ Comparing the output of ```linux_pslist``` or ```linux_pstree``` with the output
 ![2022-09-25 01_48_23-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 01_48_23-Ubuntu-Test - VMware Workstation.png)
 
 Now we need to investigate further, we use ```linux_volshell``` plugin.
+
 ![2022-09-25 01_51_16-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 01_51_16-Ubuntu-Test - VMware Workstation.png)
 
 Then we use cc() command to investigate the process ins question, we type the following command.
 ```cc(offset=0x0000000011bd2f80, pid=2036, name=None, physical=False)```
+
 ![2022-09-25 01_52_29-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 01_52_29-Ubuntu-Test - VMware Workstation.png)
 
 Flag:```ASCWG{0x21112000}```
@@ -109,6 +111,7 @@ Set no.1:
 ![2022-09-25 01_58_55-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 01_58_55-Ubuntu-Test - VMware Workstation.png)
 
 Set no.2:
+
 ![2022-09-25 01_59_56-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 01_59_56-Ubuntu-Test - VMware Workstation.png)
 
 Decrypting the first set from hexdump using cyberchef, we discover it's a base64 encoded string, attempting to decode won't result in anything useful.
@@ -121,9 +124,11 @@ Converting the second set from hex, as its header has PK; then it's a zip file.
 We download the file, only to find it needs a key. Now on to the ```mem_file``` itself.
 
 Using ```fdisk``` utility, we get the partition table and its details, the key is the disk identifier ```0x7197d620```
+
 ![2022-09-25 02_23_18-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 02_23_18-Ubuntu-Test - VMware Workstation.png)
 
 Now open the file and get the key.
+
 ![2022-09-25 02_27_31-Ubuntu-Test - VMware Workstation.png]({{site.baseurl}}/assets/2022-09-25 02_27_31-Ubuntu-Test - VMware Workstation.png)
 
 Now to decrypt the encrypted text.
