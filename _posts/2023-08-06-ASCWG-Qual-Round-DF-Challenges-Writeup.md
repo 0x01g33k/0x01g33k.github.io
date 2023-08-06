@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Hello guys, for the fourth year in a row, I've had the honor to write the Digital Forensics for Arab Security Cyber War Games 2023. This year, I wanted to target different vectors such as blockchain and some deep dive memory forensics. So without any further adue, let's get into the writeup :D. 
 
@@ -173,4 +173,3 @@ Flag:```ASCWG{2023-07-24-10:44:36-UTC-ffffde09bdc56000:003bfd28}```
 This concludes this year's challenges I wanted this year to be different than last year, and I hope the players enjoyed solving the challenges and learned something new in the process.
 
 Congratulations to the winning teams, and I hope to see you all in the final round.
-
