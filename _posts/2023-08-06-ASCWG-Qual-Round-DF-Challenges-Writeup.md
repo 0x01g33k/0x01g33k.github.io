@@ -136,13 +136,13 @@ Flag:```ASCWG{0x7b799DFbbfD91ECA3E82F2378455ab09463f1C73:0x3a79022e90fF621cd3Cc5
 
 ## Fifth Challenge: Baby, I'm a killer.
 
-Description:```A hacker managed to install and deploy another kernel driver in the same machine from which we received the memory dump in the first two challenges, Could you find when it was first installed and its first key value?
+Description:```A hacker managed to install and deploy another kernel driver in the same machine from which we received the memory dump in the first two challenges, Could you find when it was first installed and its first key value?```
 
 NOTE: you need to download this memdump, as it's entirely different from the one in the first two challenges.
 
-Difficulty:Hard
+Difficulty:```Hard```
 
-Flag format:ASCWG{YYYY-MM-DD-HH:MM:SS-(timezone)- full key value}```
+Flag format:```ASCWG{YYYY-MM-DD-HH:MM:SS-(timezone)- full key value}```
 
 Okay, this is another memory dump, which also has a kernel driver, that was installed in system32 folder and blended in with the other drivers. Let's first see it.
 
