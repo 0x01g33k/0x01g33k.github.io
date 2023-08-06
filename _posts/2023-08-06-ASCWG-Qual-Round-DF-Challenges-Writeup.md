@@ -109,7 +109,7 @@ Description:```During further investigation on the wallet that received money th
 
 Flag Format:```ASCWG{contract address: last wallet address}```
 
-Okay, this is a LIL bit trick., In this challenge we are presented with a smart contract which helped in money laundring, and we are tasked with getting the address of that contract and the last address which received any money from it.
+Okay, this is a LIL bit tricky. In this challenge we are presented with a smart contract which helped in money laundring, and we are tasked with getting the address of that contract and the last address which received any money from it.
 
 Let's first examine the transactions from the previous challenge and see the smart contract transactions.
 
