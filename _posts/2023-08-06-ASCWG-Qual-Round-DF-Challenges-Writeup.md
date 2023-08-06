@@ -103,7 +103,74 @@ Description:```During further investigation on the wallet that received money th
 
 Flag Format: ASCWG{contract address: last wallet address}```
 
-Okay, this is a LIL bit tricky 
+Okay, this is a LIL bit trick., In this challenge we are presented with a smart contract which helped in money laundring, and we are tasked with getting the address of that contract and the last address which received any money from it.
+
+Let's first examine the transactions from the previous challenge and see the smart contract transactions.
+
+If we looked just above the first transaction shown before, we can see there's a contract creation.
+![2023-08-06 23_00_49-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png]({{site.baseurl}}/assets/2023-08-06 23_00_49-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png)
+
+By clicking on contract creation, we get the first part of the flag, which is the contract's address.
+
+![2023-08-06 23_03_33-Contract Address 0xccc5eabd8f858f7a59f513875ba8ac12b9ac03d7 _ Etherscan — Mozill.png]({{site.baseurl}}/assets/2023-08-06 23_03_33-Contract Address 0xccc5eabd8f858f7a59f513875ba8ac12b9ac03d7 _ Etherscan — Mozill.png)
+
+Contract address:```0xcCC5eaBD8F858f7A59f513875Ba8AC12b9aC03D7```
+
+Now let's get back to the transactions page and see the rest of them. We notice there are 3 transactions.
+
+![2023-08-06 23_17_40-ERC1967Proxy _ Address 0x7b799dfbbfd91eca3e82f2378455ab09463f1c73 _ Etherscan — .png]({{site.baseurl}}/assets/2023-08-06 23_17_40-ERC1967Proxy _ Address 0x7b799dfbbfd91eca3e82f2378455ab09463f1c73 _ Etherscan — .png)
+
+Here comes the tricky part, let's investigate the last transaction that occured with this contract, which occured from an address that ends with ```be0e0``` we find a lot of transactions both out and in, but we only need the last sending address, which is ending with ```B97```.
+
+![2023-08-06 23_21_00-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png]({{site.baseurl}}/assets/2023-08-06 23_21_00-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png)
+
+And we get the next part of the flag.
+
+Flag:```ASCWG{0x7b799DFbbfD91ECA3E82F2378455ab09463f1C73:0x3a79022e90fF621cd3Cc54FE95873E1A50722B97}```
+
+## Fifth Challenge: Baby, I'm a killer.
+
+Description:```A hacker managed to install and deploy another kernel driver in the same machine from which we received the memory dump in the first two challenges, Could you find when it was first installed and its first key value?
+
+NOTE: you need to download this memdump, as it's entirely different from the one in the first two challenges.
+
+Flag format:ASCWG{YYYY-MM-DD-HH:MM:SS-(timezone)- full key value}```
+
+Okay, this is another memory dump, which also has a kernel driver, that was installed in system32 folder and blended in with the other drivers. Let's first see it.
+
+Using out favourite tool volatility3, we use a new plugin called ```windows.modules.Modules```, and wait for it to list all the drivers.
+
+![2023-08-06 23_35_56-Ubuntu22.04 - VMware Workstation.png]({{site.baseurl}}/assets/2023-08-06 23_35_56-Ubuntu22.04 - VMware Workstation.png)
+
+At the end of the list we notice a driver called ```pplkiller.sys```, and the challenge's name has the word killer in it, so it might be it, OR if we prefer the long road. We could simply google it :D
+
+![2023-08-06 23_36_51-Ubuntu22.04 - VMware Workstation.png]({{site.baseurl}}/assets/2023-08-06 23_36_51-Ubuntu22.04 - VMware Workstation.png)
+
+Okay, so now what? What we need now, volatility won't be able to provide us with. We need to use another tool called [MemProcFS](https://github.com/ufrisk/MemProcFS).
+
+the huge advantage of MemProcFS that it helps to navigate the memory dump any normal drive via the GUI instead of relying on commands and waiting for the output. It mounts the memdump as a mount share.
+
+![2023-08-06 23_45_37-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2023-08-06 23_45_37-Windows 10 x64 - VMware Workstation.png)
+
+Quick Note:You can run it either from CMD or powershell, but I just prefer powershell.
+
+Okay, now we naviagte to the driver in question which is named pplkiller.sys
+
+![2023-08-06 23_47_41-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2023-08-06 23_47_41-Windows 10 x64 - VMware Workstation.png)
 
 
+![2023-08-06 23_49_33-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2023-08-06 23_49_33-Windows 10 x64 - VMware Workstation.png)
+
+
+After looking at the driver's files, we found nothing useful, so let's check the service folder, and we navigate to the folder which has the same driver's name i.e ```pplkiller.sys```
+
+![2023-08-06 23_53_43-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2023-08-06 23_53_43-Windows 10 x64 - VMware Workstation.png)
+
+Opening the first file with the name ```(_key_.txt)```, we get the flag.
+
+Flag:```ASCWG{2023-07-24-10:44:36-UTC-ffffde09bdc56000:003bfd28}```
+
+This concludes this year's challenges I wanted this year to be different than last year, and I hope the players enjoyed solving the challenges and learned something new in the process.
+
+Congratulations to the winning teams, and I hope to see you all in the final round.
 
