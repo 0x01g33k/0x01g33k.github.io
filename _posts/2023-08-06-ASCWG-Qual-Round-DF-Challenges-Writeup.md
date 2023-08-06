@@ -78,7 +78,7 @@ Description:```During the investigation in one of the cases, our forensics analy
 
 Difficulty:```Medium```
 
-First and foremost, before going into any details about this challenge and the next one, as they are both related to blockchain and cryptocurrency, I'd like to give a huge shoutout to my dear friend and colleague. One of the few pioneers in the world of cryptocurrency in Egypt and a great addition to our DF team: [Khalid ElSergany](https://www.linkedin.com/in/khaled-elsergany-5676b8261/) as he helped me create these challenges. 
+First and foremost, before going into any details about this challenge and the next one, as they are both related to blockchain and cryptocurrency, I'd like to give a huge shoutout to my dear friend and colleague. One of the few pioneers in the world of cryptocurrency investigation in Egypt and a great addition to our DF team: [Khalid ElSergany](https://www.linkedin.com/in/khaled-elsergany-5676b8261/) as he helped me create these challenges. 
 
 In this challenge we are presented with a transaction hash, and in the description it's stated that the network is trial network. Okay, let's get digging. 
 
