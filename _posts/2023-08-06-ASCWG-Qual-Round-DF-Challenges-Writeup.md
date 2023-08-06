@@ -63,6 +63,11 @@ We click any of them and we get their address.
 
 Flag:```ASCWG{f8044b06c093-f8044b06c07b}```
 
+I also added a meme for anyone who thought they could cut through the memdump and just use strings with ASCWG :'D.
+
+the meme: ![ASCWG-Flag.png]({{site.baseurl}}/assets/ASCWG-Flag.png)
+
+
 ## Third Challenge: Track a coing from your crypto O valley of plenty
 
 ![WhatsApp Image 2023-08-05 at 2.26.55 PM(2).jpeg]({{site.baseurl}}/assets/WhatsApp Image 2023-08-05 at 2.26.55 PM(2).jpeg)
