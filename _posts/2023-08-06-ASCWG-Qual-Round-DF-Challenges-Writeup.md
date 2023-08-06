@@ -94,7 +94,7 @@ By simply clicking on the address, which received the coin, we get all the trans
 
 ![2023-08-06 17_16_59-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png]({{site.baseurl}}/assets/2023-08-06 17_16_59-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png)
 
-We scroll alllllllllllll the way down and we find that first transaction we are tacing.
+We scroll alllllllllllll the way down and we find that first transaction we are tracing.
 ![2023-08-06 17_18_12-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png]({{site.baseurl}}/assets/2023-08-06 17_18_12-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png)
 
 Clicking on that transaction, we find the address which sent 0.5ETH.
