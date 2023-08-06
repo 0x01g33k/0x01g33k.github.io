@@ -72,9 +72,10 @@ the meme: ![ASCWG-Flag.png]({{site.baseurl}}/assets/ASCWG-Flag.png)
 
 ![WhatsApp Image 2023-08-05 at 2.26.55 PM(2).jpeg]({{site.baseurl}}/assets/WhatsApp Image 2023-08-05 at 2.26.55 PM(2).jpeg)
 
-Description:```During the investigation in one of the cases, our forensics analysts were tasked with tracing the following transaction hash which occured on a trial network, and get the first address who sent money. Could you find that address?
+Description:```During the investigation in one of the cases, our forensics analysts were tasked with tracing the following transaction hash which occured on a trial network, and get the first address who sent money. Could you find that address?```
 
-Transaction Hash:0xa150ff06619b927cc323f16984a679a24b07265f1c1a664f1c729177929cebae```
+```Transaction Hash:0xa150ff06619b927cc323f16984a679a24b07265f1c1a664f1c729177929cebae```
+
 Difficulty:```Medium```
 
 First and foremost, before going into any details about this challenge and the next one, as they are both related to blockchain and cryptocurrency, I'd like to give a huge shoutout to my dear friend and colleague. One of the few pioneers in the world of cryptocurrency in Egypt and a great addition to our DF team: [Khalid ElSergany](https://www.linkedin.com/in/khaled-elsergany-5676b8261/) as he helped me create these challenges. 
