@@ -156,7 +156,7 @@ At the end of the list we notice a driver called ```pplkiller.sys```, and the ch
 
 Okay, so now what? What we need now, volatility won't be able to provide us with. We need to use another tool called [MemProcFS](https://github.com/ufrisk/MemProcFS).
 
-the huge advantage of MemProcFS that it helps to navigate the memory dump any normal drive via the GUI instead of relying on commands and waiting for the output. It mounts the memdump as a mount share.
+the huge advantage of MemProcFS that it helps to navigate the memory dump like any normal drive via the GUI instead of relying on commands and waiting for the output. It mounts the memdump as a mount share.
 
 ![2023-08-06 23_45_37-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2023-08-06 23_45_37-Windows 10 x64 - VMware Workstation.png)
 
