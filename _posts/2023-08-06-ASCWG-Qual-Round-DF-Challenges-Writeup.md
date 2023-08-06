@@ -139,6 +139,8 @@ Description:```A hacker managed to install and deploy another kernel driver in t
 
 NOTE: you need to download this memdump, as it's entirely different from the one in the first two challenges.
 
+Difficulty:Hard
+
 Flag format:ASCWG{YYYY-MM-DD-HH:MM:SS-(timezone)- full key value}```
 
 Okay, this is another memory dump, which also has a kernel driver, that was installed in system32 folder and blended in with the other drivers. Let's first see it.
