@@ -38,11 +38,11 @@ Difficulty:```Easy```
 
 Flag Format:```ASCWG{Address1-Address2}```
 
-Okay, so we need to go back to the memdump and see if it has any malicious drivers, using volatilit3. We will use plugin called ```windows.modscan.ModScan```, so let's see what drivers we have.
+Okay, so we need to go back to the memdump and see if it has any malicious drivers, using volatility3. We will use plugin called ```windows.modscan.ModScan```, so let's see what drivers we have.
 
 ![2023-08-06 13_45_10-Ubuntu22.04 - VMware Workstation.png]({{site.baseurl}}/assets/2023-08-06 13_45_10-Ubuntu22.04 - VMware Workstation.png)
 
-We find that naughty driver hiding in what it seems to be a normal place, basic hiding in place 101 for malwares and malicious drivers. 
+We find that naughty driver hiding in what it seems to be a normal place, basic hiding in plain sight 101 for malwares and malicious drivers. 
 
 ```This driver is in fact a signed malicious driver part of the blackcat ransomware gang malwares```
 
