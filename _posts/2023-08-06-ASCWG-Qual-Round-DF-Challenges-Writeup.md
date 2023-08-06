@@ -68,7 +68,7 @@ I also added a meme for anyone who thought they could cut through the memdump an
 the meme: ![ASCWG-Flag.png]({{site.baseurl}}/assets/ASCWG-Flag.png)
 
 
-## Third Challenge: Track a coing from your crypto O valley of plenty
+## Third Challenge: Track a coin from your crypto O valley of plenty
 
 ![WhatsApp Image 2023-08-05 at 2.26.55 PM(2).jpeg]({{site.baseurl}}/assets/WhatsApp Image 2023-08-05 at 2.26.55 PM(2).jpeg)
 
