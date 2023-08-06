@@ -105,9 +105,9 @@ Flag:```ASCWG{0xEDaf4083F29753753d0Cd6c3C50ACEb08c87b5BD}```
 
 ## Fourth Challenge: We have a new contract for you
 
-Description:```During further investigation on the wallet that received money that we found from the transaction hash in the previous challenge, we noticed there's a token that was generated, and used to send money as part of money laundring. Could find the last address that received tokens from this contract, and the address of the smart contract?
+Description:```During further investigation on the wallet that received money that we found from the transaction hash in the previous challenge, we noticed there's a token that was generated, and used to send money as part of money laundring. Could find the last address that received tokens from this contract, and the address of the smart contract?```
 
-Flag Format: ASCWG{contract address: last wallet address}```
+Flag Format:```ASCWG{contract address: last wallet address}```
 
 Okay, this is a LIL bit trick., In this challenge we are presented with a smart contract which helped in money laundring, and we are tasked with getting the address of that contract and the last address which received any money from it.
 
