@@ -52,5 +52,58 @@ We use the same plugin but provide its additional flag, which is ```--dump```, t
 
 We then open the dump for the driver in ghidra or any decompiler (I prefer using ghidra) or debugger you choose, and we get the functions it's importing.
 
+After import the .dmp file, we navigate to the imports folder, and we find it imports to functions from HAL.DLL, and ntoskrnl.exe
+
+![2023-08-06 16_57_40-Ubuntu22.04 - VMware Workstation.png]({{site.baseurl}}/assets/2023-08-06 16_57_40-Ubuntu22.04 - VMware Workstation.png)
+
+We click any of them and we get their address.
+
+![2023-08-06 16_58_55-Ubuntu22.04 - VMware Workstation.png]({{site.baseurl}}/assets/2023-08-06 16_58_55-Ubuntu22.04 - VMware Workstation.png)
+
+
+Flag:```ASCWG{f8044b06c093-f8044b06c07b}```
+
+## Third Challenge: Track a coing from your crypto O valley of plenty
+
+![WhatsApp Image 2023-08-05 at 2.26.55 PM(2).jpeg]({{site.baseurl}}/assets/WhatsApp Image 2023-08-05 at 2.26.55 PM(2).jpeg)
+
+Description:```During the investigation in one of the cases, our forensics analysts were tasked with tracing the following transaction hash which occured on a trial network, and get the first address who sent money. Could you find that address?
+
+Transaction Hash:0xa150ff06619b927cc323f16984a679a24b07265f1c1a664f1c729177929cebae```
+Difficulty:```Medium```
+
+First and foremost, before going into any details about this challenge and the next one, as they are both related to blockchain and cryptocurrency, I'd like to give a huge shoutout to my dear friend and colleague. One of the few pioneers in the world of cryptocurrency in Egypt and a great addition to our DF team: [Khalid ElSergany](https://www.linkedin.com/in/khaled-elsergany-5676b8261/) as he helped me create these challenges. 
+
+In this challenge we are presented with a transaction hash, and in the description it's stated that the network is trial network. Okay, let's get digging. 
+
+There are some test networks that make us try different techniques with crypto to avoid losing money in real in transactions, chief among them is [sepolia etheruem](https://sepolia.etherscan.io/), and this is what was meant by trial network in the description.
+
+Okay, now let the actual show begin. We will submit the transaction has we are provided with, and we get the following.
+
+![2023-08-06 17_13_37-Sepolia Transaction Hash (Txhash) Details _ Etherscan — Mozilla Firefox.png]({{site.baseurl}}/assets/2023-08-06 17_13_37-Sepolia Transaction Hash (Txhash) Details _ Etherscan — Mozilla Firefox.png)
+
+Let's take a step back to know where are heading, we are tasked with tracing this transaction to get the first address sent money to the receiver's wallet. Sounds easy :'D
+
+By simply clicking on the address, which received the coin, we get all the transactions that occured from and to that wallet. 
+
+![2023-08-06 17_16_59-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png]({{site.baseurl}}/assets/2023-08-06 17_16_59-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png)
+
+We scroll alllllllllllll the way down and we find that first transaction we are tacing.
+![2023-08-06 17_18_12-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png]({{site.baseurl}}/assets/2023-08-06 17_18_12-Sepolia Transactions Information _ Etherscan — Mozilla Firefox.png)
+
+Clicking on that transaction, we find the address which sent 0.5ETH.
+
+![2023-08-06 17_19_09-Sepolia Transaction Hash (Txhash) Details _ Etherscan — Mozilla Firefox.png]({{site.baseurl}}/assets/2023-08-06 17_19_09-Sepolia Transaction Hash (Txhash) Details _ Etherscan — Mozilla Firefox.png)
+
+Flag:```ASCWG{0xEDaf4083F29753753d0Cd6c3C50ACEb08c87b5BD}```
+
+## Fourth Challenge: We have a new contract for you
+
+Description:```During further investigation on the wallet that received money that we found from the transaction hash in the previous challenge, we noticed there's a token that was generated, and used to send money as part of money laundring. Could find the last address that received tokens from this contract, and the address of the smart contract?
+
+Flag Format: ASCWG{contract address: last wallet address}```
+
+Okay, this is a LIL bit tricky 
+
 
 
