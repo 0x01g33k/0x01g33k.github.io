@@ -63,6 +63,94 @@ Flag:```ASCWG{0xa7a85e048825c8359cd836185df877bf49ab65df}```
 
 ## Third Challenge: I know your secrets
 
+![2024-08-03 13_42_29-ASC Cyber WarGames — Mozilla Firefox.png]({{site.baseurl}}/assets/2024-08-03 13_42_29-ASC Cyber WarGames — Mozilla Firefox.png)
+
+Description:```our beloved hacker who hacked the SCADA system in the earlier challenge, got arrested and while examining their router, our investigators found out it was compromised as well. Could you get the IP and port of the attacker who hacked the router?```
+
+Flag Format:```ASCWG{IP:Port}```
+
+Okay, I wanted to introduce the players to firmware forensics, so I created a backdoor in a router's firmware, and they need to investigate the files to find the backdoor.
+
+Upon downloading the challenges' file, we find only a .bin file. Let's extract it using binwalk
+
+![2024-08-05 20_13_09-Kali Linux - VMware Workstation.png]({{site.baseurl}}/assets/2024-08-05 20_13_09-Kali Linux - VMware Workstation.png)
+
+Okay, there are lots of files, which to investigate is like finding a needle in a haystack, a quick way to naivgate to which file was edited lastly is to sort them by date, which is what we're gonna do using this command ```ls -ltr```, we will find the last modified file in the end of the list.
+
+![2024-08-05 20_16_39-Kali Linux - VMware Workstation.png]({{site.baseurl}}/assets/2024-08-05 20_16_39-Kali Linux - VMware Workstation.png)
 
 
+By reading the content of this file, we find there's a new class added and it has a base64 encoded string at the end of it, we decode it only to find there's another base64 ecoded string as well, we decode it again, only to find the backdoor code and its respective IP and port.
 
+![2024-08-05 20_19_16-Kali Linux - VMware Workstation.png]({{site.baseurl}}/assets/2024-08-05 20_19_16-Kali Linux - VMware Workstation.png)
+
+Flag:```ASCWG{41.129.186.63:50158}```
+
+## Fourth Challenge: You can run, but you can't land 1
+
+![2024-08-03 13_42_05-ASC Cyber WarGames — Mozilla Firefox.png]({{site.baseurl}}/assets/2024-08-03 13_42_05-ASC Cyber WarGames — Mozilla Firefox.png)
+
+Description:```During an investigation, one of the team members stumbled upon weird behavior in the registry regarding a task. Could discover what's wrong with this machine?```
+
+Flag Format:```ASCWG{name of the weird task:file hash}```
+
+Okay, we are presented with 2 reg files one if for Hot_Key_Current_User (HKCU), and the other is for Hot_Key_Local_Machine (HKLM).
+
+According to the description, we need to find something related to task, it's quite obvious we are looking for scheduled tasks, so let's start investigating them.
+
+PS. To all the players, veterans or new and especially the new ones. WE NEVER OPEN A REG FILE ON OUR HOST MACHINE, no one is sane enough to do so, when you wreck your machine don't blame anyone but yourselves. 
+
+We will start with HKLM file, we will navigate to the following key, ```\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree```, there we will find a task called ```RunDownloadAndExecuteDLL```.
+
+![2024-08-05 20_44_49-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2024-08-05 20_44_49-Windows 10 x64 - VMware Workstation.png)
+
+Perfect, now we need to know what it does exactly, so we will navigate to the following key in HKCU reg file, ```\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run```.
+
+Okay, so we find a task called ```DownloadDLL```, which invokes base64 powershell encoded script.
+
+![2024-08-05 20_46_59-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2024-08-05 20_46_59-Windows 10 x64 - VMware Workstation.png)
+
+
+Upon decoding the script, we find that it downloads a dll file and runs it in memory.
+
+
+![2024-08-05 20_52_02-NVIDIA GeForce Overlay.png]({{site.baseurl}}/assets/2024-08-05 20_52_02-NVIDIA GeForce Overlay.png)
+
+I wanted to teach the players that even discord could be used as a dropper to evade detection.
+
+Now we download the file. For some reason, discord stopped downloading the file directly, so the work around was to send the link in chat to anyone and it'll redirect the link to the designated file and allow the players to download it.
+
+Now we have the task's name and the file, let's hash it and get the flag.
+
+![2024-08-05 20_55_18-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2024-08-05 20_55_18-Windows 10 x64 - VMware Workstation.png)
+
+
+Flag:```ASCWG{RunDownloadAndExecuteDLL:522B754BC18F4C89B493F630158A55EE733CDC11084F76B426547FA1853799E2}```
+
+## Fifth Challenge: You can run but you can't land 2
+
+![2024-08-03 13_41_45-ASC Cyber WarGames — Mozilla Firefox.png]({{site.baseurl}}/assets/2024-08-03 13_41_45-ASC Cyber WarGames — Mozilla Firefox.png)
+
+
+Description:```From the previous REG files, could you get the IP and port of the attacker's machine?```
+
+Flag Format:```ASCWG{IP:Port}```
+
+Okay, now we need to reverse the DLL file to get the IP and port of the attacker, let's fire up IDA freeware and get to it (which is the correct and intended way)
+
+Upon opening the file in IDA, we navigate to imports tab, and we find ```inet_addr```
+
+![2024-08-05 20_59_15-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2024-08-05 20_59_15-Windows 10 x64 - VMware Workstation.png)
+
+By following it and converting view to graph, we find that it XORs the IP's octets with 0xAA.
+
+![2024-08-05 21_03_26-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2024-08-05 21_03_26-Windows 10 x64 - VMware Workstation.png)
+
+As for the port we go follow the graph to find it.
+
+![2024-08-05 21_05_48-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2024-08-05 21_05_48-Windows 10 x64 - VMware Workstation.png)
+
+Converting these values to decimal, we get the flag.
+![Untitled.jpg]({{site.baseurl}}/assets/Untitled.jpg)
+
+Flag:```ASCWG{41.33.50.42:4096}```
