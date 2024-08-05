@@ -154,3 +154,5 @@ Converting these values to decimal, we get the flag.
 ![Untitled.jpg]({{site.baseurl}}/assets/Untitled.jpg)
 
 Flag:```ASCWG{41.33.50.42:4096}```
+
+And this concludes the qual round challenges, I hope that the players have learned something new from it, and congratulations to the top 10 teams, and I'll see you all in the finals.
