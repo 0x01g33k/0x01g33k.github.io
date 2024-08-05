@@ -28,7 +28,7 @@ Then the attacker changed the value to 8000 as shown in this packet.
 
 The flag required some parts to be pieced together and they are the attacker's IP, the port, the system's name, and the changed value. Now we have all of them.
 
-Flag:```ASCWG{192.168.159.128:502-WaterTank-8000```
+Flag:```ASCWG{192.168.159.128:502-WaterTank-8000}```
 
 ## Second challenge: We got a new contract for you.
 ![2024-08-03 13_42_44-ASC Cyber WarGames — Mozilla Firefox.png]({{site.baseurl}}/assets/2024-08-03 13_42_44-ASC Cyber WarGames — Mozilla Firefox.png)
