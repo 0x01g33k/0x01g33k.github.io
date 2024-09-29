@@ -1,7 +1,7 @@
 
 Hello guys, for  the 5th year in a row I've had the honor to write the challenges for Arab Security Cyber WarGames (ASCWG). This is the writeup for the final round's challenges for this year's edition. Without any further adue, let's jump right in.
 
-## 1st Challenge: ```Validate what you wrote```
+## 1st Challenge: Validate what you wrote
 
 ![validate.png]({{site.baseurl}}/assets/validate.png)
 
