@@ -71,7 +71,7 @@ Going for the second registry key, we find the following
 
 Flag:```ASCWG{0x200:0x1:C:\WINDOWS\system32\rundll32.exe C:\Users\test\Downloads\Taigei64.dll}```
 
-## 4th Challenge: one access, and I'm in
+## 4th Challenge: one access, and Im in
 
 ![oneaccess.png]({{site.baseurl}}/assets/oneaccess.png)
 
