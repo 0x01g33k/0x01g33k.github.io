@@ -100,7 +100,7 @@ By navigating to the function in question we will find that it opens a backdoor 
 
 And we get the flag.
 
-Flag:""ASCWG{{5.42.103.173:8192-5.42.102.43:10150}}""
+Flag:`ASCWG{{5.42.103.173:8192-5.42.102.43:10150}}`
 
 ## 5th Challenge: DarkNet Desperado: the million dark mask DF
 
