@@ -116,7 +116,7 @@ In this challenge, I wanted to teach the players about a new tool which was reco
 The challenge's files are basically two empty folders with zero bytes of storage, and no matter what we do there's nothing that can be done to extract any useful data from the folders(because there's none), except for their weird naming convention
 ![2024-10-01 00_39_21-Challenge Files.7z.png]({{site.baseurl}}/assets/2024-10-01 00_39_21-Challenge Files.7z.png)
 
-Okay, after some googling we can find the github repo for the aformentioned [tool](https://github.com/nyxgeek/dirdevil)
+Okay, after some googling we can find the github repo for the aforementioned [tool](https://github.com/nyxgeek/dirdevil)
 
 We simply need to run the decoder at the same location in which the empty folders are stored, after executing the decoder script, we will find a file called ```decoded_output.txt```
 
