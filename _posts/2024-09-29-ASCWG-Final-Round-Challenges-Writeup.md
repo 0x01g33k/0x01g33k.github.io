@@ -25,7 +25,7 @@ Okay, so now we need to get the hash of the file, the hash starts at ```ed 17 f6
 
 ```ASCWG{ED17F698FDD16C6802DB13BE54B142EDAA9030584C370CDD093A2884FF7DC10B}```
 
-## 2nd Challenge: Did you check our new Policy?
+## 2nd Challenge: Did you check our new Policy
 
 ![policy.png]({{site.baseurl}}/assets/policy.png)
 
