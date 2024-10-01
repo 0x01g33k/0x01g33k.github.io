@@ -1,5 +1,5 @@
 
-Hello guys, for  the 5th year in a row I've had the honor to write the challenges for Arab Security Cyber WarGames (ASCWG). This is the writeup for the final round's challenges for this year's edition. Without any further adue, let's jump right in.
+Hello guys, for  the 5th year in a row I've had the honor to write the challenges for Arab Security Cyber WarGames (ASCWG). This is the writeup for the final round's challenges for this year's edition. Without any further a due, let's jump right in.
 
 ## 1st Challenge: Validate what you wrote
 
@@ -36,7 +36,7 @@ Flag:```ASCWG{http://C2 URL:PORT}```
 
 Okay, in this challenge I wanted the players to learn about the web browser's policies registry keys, said keys can be exploited to gain persistence or execute malicious files.
 
-Firstly, we will open the file in ```notepad+++``` or ```registry workshop```, then we will navigate to the following registry key ```\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Google\Chrome```
+Firstly, we will open the file in ```notepad++``` or ```registry workshop```, then we will navigate to the following registry key ```\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Google\Chrome```
 
 ![2024-09-30 23_13_41-Win11 - VMware Workstation.png]({{site.baseurl}}/assets/2024-09-30 23_13_41-Win11 - VMware Workstation.png)
 We will find that the key has 3 values, one of them has a weirdly looking B64 encoded string, and the other two help execute the encoded command. We decode the encoded string, we find the following
@@ -120,7 +120,8 @@ Okay, after some googling we can find the github repo for the aforementioned [to
 
 We simply need to run the decoder at the same location in which the empty folders are stored, after executing the decoder script, we will find a file called ```decoded_output.txt```
 
-![2024-10-01 00_42_43-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/_posts/2024-10-01 00_42_43-Windows 10 x64 - VMware Workstation.png)
+![2024-10-01 00_42_43-Windows 10 x64 - VMware Workstation.png]({{site.baseurl}}/assets/2024-10-01 00_42_43-Windows 10 x64 - VMware Workstation.png)
+
 
 Inside that file, we will find the flag for this challenge.
 
