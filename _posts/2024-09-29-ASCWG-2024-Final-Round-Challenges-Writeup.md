@@ -127,4 +127,4 @@ Inside that file, we will find the flag for this challenge.
 
 Flag: ```ASCWG{B1!$$y_!s_N0t_0n3_0f_th3_susp3ct$}```
 
-With this concludes this year's challenges, I hope the players learned something new and enjoyed solving  these challenges, I personally learned a lot of interesting stuff, and I'll see you all in a new blogpost.
+And with, this we conclude this year's challenges, I hope the players learned something new and enjoyed solving  these challenges, I personally learned a lot of interesting stuff during the creation of these challenges, and I'll see you all in a new blogpost.
