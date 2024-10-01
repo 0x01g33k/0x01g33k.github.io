@@ -111,7 +111,7 @@ threat actor was using to deliver his malware and exfiltrate any data they need.
 
 Flag: ```ASCWG{something_something}```
 
-In this challenge, I wanted to teach the players about a new tool which was recommended by dear friend Jimmy, this tool is called [dirDevil](https://trustedsec.com/blog/dirdevil-hiding-code-and-content-within-folder-structures) and it's used by adversaries to either deliver their malicious payloads, or for data exfiltration.
+In this challenge, I wanted to teach the players about a new tool which was recommended by dear friend and brother Muhammad Gamal Jimmy, this tool is called [dirDevil](https://trustedsec.com/blog/dirdevil-hiding-code-and-content-within-folder-structures) and it's used by adversaries to either deliver their malicious payloads, or for data exfiltration.
 
 The challenge's files are basically two empty folders with zero bytes of storage, and no matter what we do there's nothing that can be done to extract any useful data from the folders(because there's none), except for their weird naming convention
 ![2024-10-01 00_39_21-Challenge Files.7z.png]({{site.baseurl}}/assets/2024-10-01 00_39_21-Challenge Files.7z.png)
