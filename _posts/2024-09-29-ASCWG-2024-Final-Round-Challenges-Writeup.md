@@ -107,7 +107,7 @@ Flag:`ASCWG{5.42.103.173:8192-5.42.102.43:10150}`
 ![darknet.png]({{site.baseurl}}/assets/darknet.png)
 
 Description:```During the arrest of the one of the criminals of impersonating the name "the broker" one of the DF investigators stumbled upon a devilish method the 
-threat actor was using to deliver his malware and exfiltrate any data they need. could you get the las thing he intended to deploy or extract?```
+threat actor was using to deliver his malware and exfiltrate any data they need. could you get the last thing he intended to deploy or extract?```
 
 Flag: ```ASCWG{something_something}```
 
