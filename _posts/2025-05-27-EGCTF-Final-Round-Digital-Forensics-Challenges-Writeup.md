@@ -48,9 +48,9 @@ Flag:```EGCTF{Brut3F0rc!ng_&X0r_1$_FuN}```
 
 ![2025-05-27 14_27_33-Admin Panel — Mozilla Firefox.png]({{site.baseurl}}/_assets/2025-05-27 14_27_33-Admin Panel — Mozilla Firefox.png)
 
-Description:```Our Digital Forensics team acquired a sim card image for the notorious criminal R.Red, your task as a Digital Forensics analyst to retrieve the messages from the sim card ,the number which the message was sent from, and the perpetrator's username who sent it.
+Description:```Our Digital Forensics team acquired a sim card image for the notorious criminal R.Red, your task as a Digital Forensics analyst to retrieve the messages from the sim card ,the number which the message was sent from, and the perpetrator's username who sent it.```
 
-Flag Format: EGCTF{Mob No.,message,username}```
+Flag Format: EGCTF{Mob No.,message,username}
 
 Okay, this is where the fun begins, in this challenge I wanted to introduce the idea that you can investigate and analyze a SIM Card and gain useful insights. The task in this challenge is quite simple, the players are presented with a SIM Card img file and they need to extract 2 important parts from the img. First they need to get the message that was received by R.Red, second they need to find the sender's mobile number. 
 
