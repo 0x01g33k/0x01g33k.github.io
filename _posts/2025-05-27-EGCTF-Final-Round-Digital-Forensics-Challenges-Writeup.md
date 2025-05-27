@@ -2,7 +2,7 @@
 
 
 
-Hello guys, for the first time I had the honor to write the Digital Forensics Challenges for EG|CERT's CTF.
+Hello guys, for the first time I had the honor to write the Digital Forensics Challenges for EG-CERT's CTF.
 
 In this round, I wanted to create some intersting challenges with new ideas and concepts that helps in making DF investigation more relatable and shed some light on the nature of the daily of a DF investigator. So, without any further a due, let's dive into the writeup.
 
