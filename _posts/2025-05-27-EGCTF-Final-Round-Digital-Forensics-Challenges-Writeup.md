@@ -107,6 +107,33 @@ Flag:```EGCTF{15132893723,SM$_F0r3ns!c$_1s_@w3s0me,dreaminlace}```
 
 Description:```A hacker managed to exploit a vulnerability in a DeFi bank smart contract, he was able to transfer all the money from the bank's contract to his wallet, your task as a DF analyst is to find the attacker's wallet, and analyze the hacker's malicious smart contract to find the function which is responsible for the withdrawal.```
 
-```Contract address: 0x228de92D039C480d3951597AFe4d434344004A9f````
+```Contract address: 0x228de92D039C480d3951597AFe4d434344004A9f```
 
 ```Flag Format: EGCTF{address,opcode hex}```
+
+In this challenge, I wanted to introduce the players to the idea of cryptocurrency and blockchain forensics. 
+
+The idea in this challenge simulates ```the re-entrancy attack``` in smart contracts, the players are presented with a smart contract address and are tasked with finding the address of the perpetrator's wallet, and analyze the smart contract bytecode to find the function which inititates the exploitation of the vulnerable contract.
+
+The contract was launched on ```[sepolia ether test network](https://sepolia.etherscan.io/)```, so that's where we will start our investigation.
+
+Upon looking up the contract on ```sepolia``` test network, we will find that there are some transactions that occurred and the creation of 4 smart contracts.
+
+![2025-05-27 21_36_41-Address 0x228de92D039C480d3951597AFe4d434344004A9f _ Etherscan — Mozilla Firefox.png]({{site.baseurl}}/assets/2025-05-27 21_36_41-Address 0x228de92D039C480d3951597AFe4d434344004A9f _ Etherscan — Mozilla Firefox.png)
+
+The first part of the flag is quite easy, we need to get the address that received the crypto first, which ends with ```e433```, the full address is ```0xD1191248aA452F5a97B06AFfB856303A7D04e433```. 
+
+Now we move to the more interesting part which is analyzing the source code for the deployed smart contracts.
+
+We will start with the first contract, which its address is ```0xf15d2A9Cff62dd5f431d0D8ec8052c2aD5De8F1c```, we will view the bytecode, and copy it to any suitable evm bytecode decompiler.
+
+Upon analyzing the code, we will find that there's a function called withdraw which causes the exploitation of the ```_withdrar()_``` function in the victim smart contract. Which its bytecode is ```PUSH4 0x2e1a7d4d```
+
+```PUSH20 0xffffffffffffffffffffffffffffffffffffffff
+AND
+PUSH4 0x2e1a7d4d             ; ← withdraw(uint256)
+PUSH8 0x0de0b6b3a7640000     ; ← 1 ether
+PUSH1 0x40
+MLOAD
+...
+CALL                         ; ← actual reentrant call```
