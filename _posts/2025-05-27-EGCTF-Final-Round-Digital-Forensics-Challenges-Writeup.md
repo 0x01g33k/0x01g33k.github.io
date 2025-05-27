@@ -129,11 +129,17 @@ We will start with the first contract, which its address is ```0xf15d2A9Cff62dd5
 
 Upon analyzing the code, we will find that there's a function called withdraw which causes the exploitation of the ```_withdrar()_``` function in the victim smart contract. Which its bytecode is ```PUSH4 0x2e1a7d4d```
 
-```PUSH20 0xffffffffffffffffffffffffffffffffffffffff
+> PUSH20 0xffffffffffffffffffffffffffffffffffffffff
 AND
 PUSH4 0x2e1a7d4d             ; ← withdraw(uint256)
 PUSH8 0x0de0b6b3a7640000     ; ← 1 ether
 PUSH1 0x40
 MLOAD
 ...
-CALL                         ; ← actual reentrant call```
+CALL                         ; ← actual reentrant call
+
+Now we got both parts of the flag.
+
+Flag:```EGCTF{0xD1191248aA452F5a97B06AFfB856303A7D04e433,PUSH4 0x2e1a7d4d}```
+
+## Fifth Challenge: Chronoshell
