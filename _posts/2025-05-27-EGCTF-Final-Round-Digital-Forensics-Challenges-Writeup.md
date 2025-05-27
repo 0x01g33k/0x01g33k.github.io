@@ -115,7 +115,7 @@ In this challenge, I wanted to introduce the players to the idea of cryptocurren
 
 The idea in this challenge simulates ```the re-entrancy attack``` in smart contracts, the players are presented with a smart contract address and are tasked with finding the address of the perpetrator's wallet, and analyze the smart contract bytecode to find the function which inititates the exploitation of the vulnerable contract.
 
-The contract was launched on ```[sepolia ether test network](https://sepolia.etherscan.io/)```, so that's where we will start our investigation.
+The contract was launched on ```sepolia ether test network```, so that's where we will start our investigation.
 
 Upon looking up the contract on ```sepolia``` test network, we will find that there are some transactions that occurred and the creation of 4 smart contracts.
 
