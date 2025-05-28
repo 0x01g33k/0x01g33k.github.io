@@ -143,3 +143,81 @@ Now we got both parts of the flag.
 Flag:```EGCTF{0xD1191248aA452F5a97B06AFfB856303A7D04e433,PUSH4 0x2e1a7d4d}```
 
 ## Fifth Challenge: Chronoshell
+
+![2025-05-27 23_14_50-Admin Panel — Mozilla Firefox.png]({{site.baseurl}}/assets/2025-05-27 23_14_50-Admin Panel — Mozilla Firefox.png)
+
+Description:```A hacker managed to gain persistence on the dev team's head machine, our DF team did their best to figure out how did it happen. Could you figure out who did it?```
+
+```Flag Format: EGCTF{mail}```
+
+Okay, in this challenge I wanted the players to investigate in linux persistence mechanisms. The players are presented with ```/etc/``` directory and they need to find the mail of the user who gained persistence on the machine.
+
+By googling linux persistence they will come across this fine piece of article explaining different persistence techniques --> [The art of Linux Peristence](https://hadess.io/the-art-of-linux-persistence/)
+
+The name of the challenge is hinting in two things, the first the word chrono which is related to time, and the second word is shell, so we need to investigate something relate to time and it's not cronjob. 
+
+Upon further search we will find that there's a persistence technique which makes use of ```systemd timers```, okay now let's take a look into that.
+
+We will navigate to the following path ```etc/systemd/system/```, there we will find two oddly named files ```ssh.service```, ```ssh.timer```.
+![2025-05-28 08_06_25-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_06_25-Ubuntu-NEW - VMware Workstation.png)
+
+If we used cat on the files we will find the following
+![2025-05-28 08_08_10-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_08_10-Ubuntu-NEW - VMware Workstation.png)
+
+Now we got the flag.
+
+Flag:```EGCTF{baxoci2450@pricegh.com}```
+
+## Sixth Challenge: Modular Persistence
+
+![2025-05-27 23_15_17-Admin Panel — Mozilla Firefox.png]({{site.baseurl}}/assets/2025-05-27 23_15_17-Admin Panel — Mozilla Firefox.png)
+
+Description:```During a routine threat hunting engagement, our DFIR team detected an unusual outbound connection originating from the CEO’s Linux workstation. The connection was ephemeral, our team managed to acquire two directories which they suspect to be the cause of the incident. The connection is suspected to be hidden in some parts of the kernel, could you find the C2 which is used in the connection?```
+
+```Challenge Link: https://drive.google.com/file/d/1mIOJn7FLR4MYtzzSn18QdTZKFKG4wE5e/view?usp=sharing```
+
+```Flag Formt: EGCTF{something something}```
+
+Final challenge, in this challenge I wanted to address another linux persistence technique, in this one I used a malicious kernel module and made it receive commands from a C2, the target is to get the C2.
+
+The players are presented with two archives, one for ```etc```, and the second is for ```drivers``` directories. 
+
+If we took a look at ```etc``` dir and navigated to the directory named ```modules-load.d```, we will find a file named ```lp_drv.conf```, by catting we will get the malicious driver's name which is ```lp_drv.ko```.
+
+![2025-05-28 08_16_00-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_16_00-Ubuntu-NEW - VMware Workstation.png)
+
+
+Now onto the drivers directory, we will navigate to ```misc```, we will find the malicious kernel driver.
+
+![2025-05-28 08_20_57-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_20_57-Ubuntu-NEW - VMware Workstation.png)
+
+Now, we move to ```ghidra``` to analyze the file, from first look we find that it's stripped from debug symbols, which was intentional, now we need to go for the ```init_module``` function and start from there
+
+![2025-05-28 08_24_22-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_24_22-Ubuntu-NEW - VMware Workstation.png)
+
+By looking at its code, we will find that there's a MOV instruction to an address.
+
+![2025-05-28 08_27_33-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_27_33-Ubuntu-NEW - VMware Workstation.png)
+
+By going to said address, we will find that there is a MOVZ to and XORed string.
+
+![2025-05-28 08_29_36-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_29_36-Ubuntu-NEW - VMware Workstation.png)
+
+If we looked at the pseudocode of the function we will find the XOR key which is ```7```
+
+![2025-05-28 08_31_47-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_31_47-Ubuntu-NEW - VMware Workstation.png)
+
+Now all we need is to decode the XORed string, and we find a pastebin link.
+
+![2025-05-28 08_33_58-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_33_58-Ubuntu-NEW - VMware Workstation.png)
+
+Goign to the pastebin link, we fina a base64 encoded string, we decode it and we get the flag.
+![2025-05-28 08_35_17-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_35_17-Ubuntu-NEW - VMware Workstation.png)
+
+![2025-05-28 08_36_04-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_36_04-Ubuntu-NEW - VMware Workstation.png)
+
+Flag:```EGCTF{P3rs!st3nce_h@S_M@nY_M3th0d$}```
+
+With this we conclude the writeup for the second round of EGCTF, it was really fun making those challenges. I learned a lot of cool new stuff in the process. Congratulations for the winning teams, and to all of the teams keep working, practicing, and grinding. I'll see you all in the next CTF.
+
+
