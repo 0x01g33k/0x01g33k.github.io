@@ -15,9 +15,9 @@ Description: ```During a regular investigation, our DFIR engineer stumbled upon 
 
 ```Flag Format: EGCTF{Drive:\example\example\file.xxx}```
 
-In created two warmup challenges for this round, this was the first one of them. In this challenge, the idea was simple, there's a certain ```*.rar``` file that was opened on the user's machine, and the flag is the full path of that file. The players were presented with ```.hiv``` file, which they can open in ```registry explorer``` or any other specialized tool.
+I created two warmup challenges for this round, this was the first one of them. In this challenge, the idea was simple, there's a certain ```*.rar``` file that was opened on the user's machine, and the flag is the full path of that file. The players were presented with ```.hiv``` file, which they can open in ```registry explorer``` or any other specialized tool.
 
-If we opened in in ```regsitry explorer```, we will find the hive as follows.
+If we opened it in ```regsitry explorer```, we will find the hive as follows.
 
 ![2025-05-27 13_59_00-Win10 NEW2 - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-27 13_59_00-Win10 NEW2 - VMware Workstation.png)
 
@@ -74,7 +74,7 @@ Upon viewing/extracting the files from the img, we will find the following files
 ![2025-05-27 14_38_38-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-27 14_38_38-Ubuntu-NEW - VMware Workstation.png)
 
 
-Okay, now we will go to directory named ```MF GSM```, to get the contents of a file named ```EF_SMS```, which holds the data of the message.
+Okay, now we will go to directory named ```DF GSM```, to get the contents of a file named ```EF_SMS```, which holds the data of the message.
 
 ![2025-05-27 14_40_48-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-27 14_40_48-Ubuntu-NEW - VMware Workstation.png)
 
@@ -199,11 +199,11 @@ By looking at its code, we will find that there's a MOV instruction to an addres
 
 ![2025-05-28 08_27_33-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_27_33-Ubuntu-NEW - VMware Workstation.png)
 
-By going to said address, we will find that there is a MOVZ to and XORed string.
+By going to said address, we will find that there is a MOVZ instruction to XORed string.
 
 ![2025-05-28 08_29_36-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_29_36-Ubuntu-NEW - VMware Workstation.png)
 
-If we looked at the pseudocode of the function we will find the XOR key which is ```7```
+If we looked at the code of the function we will find the XOR key which is ```7```
 
 ![2025-05-28 08_31_47-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_31_47-Ubuntu-NEW - VMware Workstation.png)
 
@@ -211,7 +211,7 @@ Now all we need is to decode the XORed string, and we find a pastebin link.
 
 ![2025-05-28 08_33_58-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_33_58-Ubuntu-NEW - VMware Workstation.png)
 
-Goign to the pastebin link, we fina a base64 encoded string, we decode it and we get the flag.
+Goign to the pastebin link, we find a base64 encoded string, we decode it and we get the flag.
 ![2025-05-28 08_35_17-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_35_17-Ubuntu-NEW - VMware Workstation.png)
 
 ![2025-05-28 08_36_04-Ubuntu-NEW - VMware Workstation.png]({{site.baseurl}}/assets/2025-05-28 08_36_04-Ubuntu-NEW - VMware Workstation.png)
@@ -219,5 +219,3 @@ Goign to the pastebin link, we fina a base64 encoded string, we decode it and we
 Flag:```EGCTF{P3rs!st3nce_h@S_M@nY_M3th0d$}```
 
 With this we conclude the writeup for the second round of EGCTF, it was really fun making those challenges. I learned a lot of cool new stuff in the process. Congratulations for the winning teams, and to all of the teams keep working, practicing, and grinding. I'll see you all in the next CTF.
-
-
