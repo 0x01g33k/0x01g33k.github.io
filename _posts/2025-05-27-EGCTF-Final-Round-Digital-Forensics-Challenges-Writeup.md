@@ -127,7 +127,7 @@ Now we move to the more interesting part which is analyzing the source code for 
 
 We will start with the first contract, which its address is ```0xf15d2A9Cff62dd5f431d0D8ec8052c2aD5De8F1c```, we will view the bytecode, and copy it to any suitable evm bytecode decompiler.
 
-Upon analyzing the code, we will find that there's a function called withdraw which causes the exploitation of the ```_withdrar()_``` function in the victim smart contract. Which its bytecode is ```PUSH4 0x2e1a7d4d```
+Upon analyzing the code, we will find that there's a function called withdraw which causes the exploitation of the ```_withdraw()_``` function in the victim smart contract. Which its bytecode is ```PUSH4 0x2e1a7d4d```
 
 > PUSH20 0xffffffffffffffffffffffffffffffffffffffff
 AND
